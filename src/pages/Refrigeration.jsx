@@ -87,11 +87,17 @@ export const Refrigeration = () => {
                                     onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
                                     onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
                                 >
-                                    <div style={{ height: '200px', overflow: 'hidden', borderRadius: '8px', marginBottom: '1rem' }}>
+                                    <div style={{
+                                        height: '200px',
+                                        overflow: 'hidden',
+                                        borderRadius: '8px',
+                                        marginBottom: '1rem',
+                                        background: '#b8d4e8' // Sky blue background
+                                    }}>
                                         <img
                                             src={product.image}
                                             alt={product.name}
-                                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                            style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                                         />
                                     </div>
                                     <h3 style={{ fontSize: '1.2rem' }}>{product.name}</h3>
