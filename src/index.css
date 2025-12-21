@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Rajdhani:wght@500;700&display=swap');
+
+@font-face {
+  font-family: 'Rastanty Cortez';
+  src: url('/fonts/Rastanty Cortez.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-bg: #ffffff;
+  /* Plain White */
+  --color-surface: rgba(0, 0, 0, 0.05);
+  --color-primary: #FFB162;
+  /* Burning Flame */
+  --color-secondary: #FFB162;
+  /* Burning Flame as secondary too for now */
+  --color-text: #1a1a1a;
+  --color-text-muted: #555555;
+
+  --font-body: 'Outfit', sans-serif;
+  --font-display: 'Rajdhani', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Utilities */
+.glass-panel {
+  background: var(--color-surface);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, var(--color-primary), #FF8C00);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold {
+  color: var(--color-secondary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text);
+  margin-bottom: 0.5em;
+}
+
+p {
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Utilities */
+.desktop-nav {
+  display: flex;
+}
+
+.mobile-nav-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .mobile-nav-btn {
+    display: block !important;
+  }
+}
+
+/* Product Simulation Overlay - Migrated from App.css for safety */
+.product-simulation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3000;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1rem;
+}
+
+.product-simulation-overlay.is-simulation {
+  justify-content: flex-end;
+  background: transparent;
+}
+
+.product-simulation-content {
+  padding: 3rem;
+  max-width: 900px;
+  width: 100%;
+  pointer-events: auto;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.product-simulation-content.is-simulation {
+  max-width: min(500px, 95vw);
+  width: 100%;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+
+@media (min-width: 768px) {
+  .product-simulation-content.is-simulation {
+    max-width: 450px;
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    margin: 0;
+
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+    padding: 3rem;
+  }
+}
+
+/* Home Logo Section Responsiveness */
+.home-logo-container {
+  background: #fff;
+  padding: 4rem 1rem 1rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 20;
+}
+
+.home-logo-img {
+  width: 550px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .home-logo-container {
+    padding: 2.5rem 1rem 1rem 1rem;
+  }
+
+  .home-logo-img {
+    width: 300px;
+  }
+}
+
+
+/* Header Responsiveness */
+.header-logo-img {
+  height: 90px;
+  object-fit: contain;
+  transform: translateY(-6px);
+}
+
+.header-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1;
+}
+
+.header-tagline-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 4px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+  line-height: 1.1;
+}
+
+.header-tagline {
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  align-self: flex-start;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .header-logo-img {
+    height: 50px;
+    /* Reduce logo size on mobile */
+    transform: translateY(0);
+  }
+
+  .header-title {
+    font-size: 1.2rem;
+    /* Reduce title size on mobile */
+  }
+
+  .header-tagline-container {
+    display: none;
+    /* Hide tagline on mobile as requested for cleaner space */
+  }
+
+  .header-spacer {
+    height: 80px !important;
+    /* Smaller header spacer on mobile */
+  }
+}
+
+/* ============================================
+   COMPREHENSIVE MOBILE RESPONSIVENESS
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  /* Base Typography */
+  h1,
+  h2 {
+    font-size: 2rem !important;
+  }
+
+  h3 {
+    font-size: 1.5rem !important;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  /* Hero Section */
+  section {
+    padding: 2rem 1rem !important;
+  }
+
+  /* Stats Counter - Smaller on mobile */
+  .stat-number {
+    font-size: 2.5rem !important;
+  }
+
+  /* Client Logos - Smaller on mobile */
+  .client-logo {
+    max-width: 80px !important;
+  }
+
+  .client-card {
+    min-width: 180px !important;
+    gap: 0.75rem !important;
+  }
+
+  .client-logo-container {
+    height: 100px !important;
+    padding: 0.5rem !important;
+  }
+
+  .client-card span {
+    font-size: 1rem !important;
+  }
+
+  /* Glass Panels - Less padding on mobile */
+  .glass-panel {
+    padding: 1rem !important;
+    border-radius: 12px !important;
+  }
+
+  /* Grid layouts - Stack on mobile */
+  [style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Flex row to column on mobile */
+  [style*="flex-direction: row"] {
+    flex-direction: column !important;
+  }
+
+  /* Header adjustments for mobile */
+  header {
+    padding: 0.75rem 1rem !important;
+  }
+}
+
+/* Extra small screens (phones) */
+@media (max-width: 480px) {
+  .sony-intro-overlay img {
+    width: 200px !important;
+  }
+
+  /* Even smaller stats on very small screens */
+  .stat-number {
+    font-size: 2rem !important;
+  }
+
+  /* Smaller client cards on phones */
+  .client-card {
+    min-width: 140px !important;
+  }
+
+  .client-logo-container {
+    height: 70px !important;
+  }
+
+  .client-card span {
+    font-size: 0.85rem !important;
+  }
+
+  /* Reduce main container padding */
+  section {
+    padding: 1.5rem 0.75rem !important;
+  }
+
+  /* Footer grid - single column on phones */
+  footer>div {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* 3D Canvas Mobile Touch Optimization */
+canvas {
+  touch-action: none;
+  /* Prevent browser gestures on 3D canvas */
+}
+
+@media (max-width: 768px) {
+
+  /* Better touch handling for 3D product simulations */
+  .product-simulation-overlay.is-simulation {
+    touch-action: manipulation;
+  }
+}
