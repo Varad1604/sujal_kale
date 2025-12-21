@@ -2,6 +2,11 @@ import { useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useStore } from '../store'
 import { Link } from 'react-router-dom'
+import { useGLTF } from '@react-three/drei'
+
+// Preload 3D models immediately when this page loads
+useGLTF.preload('/models/Ced Coated 9-draco.glb')
+useGLTF.preload('/models/Ced Coated 2-draco.glb')
 
 const products = [
     { id: 'condenser', name: '5 row condenser', image: '/images/5 row condenser.jpeg' },

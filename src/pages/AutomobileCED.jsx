@@ -2,6 +2,10 @@ import { useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useStore } from '../store'
 import { Link } from 'react-router-dom'
+import { useGLTF } from '@react-three/drei'
+
+// Preload 3D models immediately when this page loads
+useGLTF.preload('/models/spring-draco.glb')
 
 const products = [
     { id: 'spring', name: 'Industrial Spring', image: '/images/spring.png', hasSimulation: true },
