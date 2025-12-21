@@ -117,7 +117,7 @@ export const AutomobileCED = () => {
                         </div>
                     </div>
                 ) : selectedProduct?.hasSimulation ? (
-                    // SIMULATION PRODUCTS - with animation
+                    // SIMULATION PRODUCTS - with animation (same layout as Refrigeration)
                     <motion.div
                         key="simulation-overlay"
                         initial={{ opacity: 0 }}
@@ -130,48 +130,39 @@ export const AutomobileCED = () => {
                             left: 0,
                             width: '100%',
                             height: '100%',
+                            zIndex: 20,
+                            pointerEvents: 'none',
                             display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'flex-end',
                             alignItems: 'center',
-                            justifyContent: 'center',
-                            zIndex: 105,
-                            paddingTop: '6rem',
-                            pointerEvents: 'none'
+                            padding: '1rem'
                         }}
                         className="product-simulation-overlay is-simulation"
                     >
-                        {/* Content Card for Simulation */}
-                        <div
-                            className="glass-panel product-simulation-content is-simulation"
-                            style={{
-                                position: 'absolute',
-                                bottom: '50px',
-                                left: '50px',
-                                pointerEvents: 'auto',
-                                maxWidth: '350px',
-                                overflow: 'hidden',
-                                background: 'rgba(255, 255, 255, 0.85)',
-                                backdropFilter: 'blur(12px)',
-                                border: '1px solid rgba(255, 255, 255, 0.5)',
-                                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
-                                padding: '2rem',
-                                borderRadius: '20px'
-                            }}
-                        >
-                            {/* Simulation Content */}
-                            <div style={{ marginBottom: '1rem' }}>
-                                <h2 style={{ fontSize: '1.8rem', color: 'var(--color-secondary)', marginBottom: '0.5rem' }}>
-                                    {activeProduct}
-                                </h2>
-                                <p style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem' }}>
-                                    High-fidelity simulation of the manufacturing process.
-                                </p>
-                                <div style={{ marginTop: '1rem', fontSize: '0.9rem', color: 'var(--color-primary)' }}>
-                                    <p>• Rotate to inspect</p>
-                                    <p>• Scroll to zoom</p>
-                                </div>
+                        {/* Content Card for Simulation - Centered like Condenser */}
+                        <div className="glass-panel" style={{
+                            padding: '1.5rem',
+                            maxWidth: 'min(500px, 95vw)',
+                            width: '100%',
+                            marginBottom: '1rem',
+                            background: 'rgba(255, 255, 255, 0.9)',
+                            backdropFilter: 'blur(10px)',
+                            borderRadius: '16px',
+                            pointerEvents: 'auto',
+                            maxHeight: '40vh',
+                            overflowY: 'auto'
+                        }}>
+                            <h2 style={{ fontSize: '1.8rem', color: 'var(--color-secondary)', marginBottom: '0.5rem' }}>
+                                {activeProduct}
+                            </h2>
+                            <p style={{ fontSize: '0.95rem', color: 'var(--color-text-muted)', marginBottom: '1rem' }}>
+                                High-fidelity simulation of the manufacturing process.
+                            </p>
+                            <div style={{ marginBottom: '1rem', fontSize: '0.9rem', color: 'var(--color-primary)' }}>
+                                <p>• Rotate to inspect</p>
+                                <p>• Scroll to zoom</p>
                             </div>
-
-                            {/* Back to Gallery Button */}
                             <button
                                 onClick={() => setActiveProduct(null)}
                                 style={{
@@ -181,8 +172,7 @@ export const AutomobileCED = () => {
                                     fontSize: '1rem',
                                     fontWeight: 'bold',
                                     cursor: 'pointer',
-                                    padding: 0,
-                                    marginTop: '0.5rem'
+                                    padding: 0
                                 }}
                             >
                                 ← Back to Gallery
