@@ -348,11 +348,12 @@ export const Home = () => {
                                                     src={client.logo}
                                                     alt={client.name}
                                                     className="client-logo"
+                                                    loading="lazy"
                                                     style={{
                                                         maxHeight: '100%',
                                                         maxWidth: '100%',
                                                         objectFit: 'contain',
-                                                        filter: 'brightness(1.1)', // Slight brightness boost
+                                                        filter: 'brightness(1.1)',
                                                         transition: 'transform 0.3s'
                                                     }}
                                                 />
@@ -394,6 +395,7 @@ export const Home = () => {
                         <img
                             src="/images/director.jpg"
                             alt="Mr. Gopal Kale"
+                            loading="lazy"
                             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                         />
                     </div>

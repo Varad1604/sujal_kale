@@ -1,19 +1,42 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { lazy, Suspense } from 'react'
 import { Layout } from './components/Layout'
 import { Home } from './pages/Home'
-import { About } from './pages/About'
-import { Products } from './pages/Products'
-import { AutomobileCED } from './pages/AutomobileCED'
-import { Refrigeration } from './pages/Refrigeration'
-import { Process } from './pages/Process'
-import { OurFacility } from './pages/OurFacility'
-import { OurLab } from './pages/OurLab'
-import { Contact } from './pages/Contact'
-import { Careers } from './pages/Careers'
-import { JobApplication } from './pages/JobApplication'
-import { ThankYou } from './pages/ThankYou'
-
 import { ScrollToTop } from './components/ScrollToTop'
+
+// Lazy load all pages except Home for faster initial load
+const About = lazy(() => import('./pages/About').then(m => ({ default: m.About })))
+const Products = lazy(() => import('./pages/Products').then(m => ({ default: m.Products })))
+const AutomobileCED = lazy(() => import('./pages/AutomobileCED').then(m => ({ default: m.AutomobileCED })))
+const Refrigeration = lazy(() => import('./pages/Refrigeration').then(m => ({ default: m.Refrigeration })))
+const Process = lazy(() => import('./pages/Process').then(m => ({ default: m.Process })))
+const OurFacility = lazy(() => import('./pages/OurFacility').then(m => ({ default: m.OurFacility })))
+const OurLab = lazy(() => import('./pages/OurLab').then(m => ({ default: m.OurLab })))
+const Contact = lazy(() => import('./pages/Contact').then(m => ({ default: m.Contact })))
+const Careers = lazy(() => import('./pages/Careers').then(m => ({ default: m.Careers })))
+const JobApplication = lazy(() => import('./pages/JobApplication').then(m => ({ default: m.JobApplication })))
+const ThankYou = lazy(() => import('./pages/ThankYou').then(m => ({ default: m.ThankYou })))
+
+// Minimal loading spinner
+const PageLoader = () => (
+  <div style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minHeight: '50vh',
+    color: 'var(--color-primary)'
+  }}>
+    <div style={{
+      width: '40px',
+      height: '40px',
+      border: '3px solid rgba(255,177,98,0.2)',
+      borderTop: '3px solid var(--color-primary)',
+      borderRadius: '50%',
+      animation: 'spin 0.8s linear infinite'
+    }} />
+    <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
+  </div>
+)
 
 function App() {
   return (
@@ -22,17 +45,17 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="products" element={<Products />} />
-          <Route path="products/automobile-ced" element={<AutomobileCED />} />
-          <Route path="products/refrigeration" element={<Refrigeration />} />
-          <Route path="process" element={<Process />} />
-          <Route path="our-facility" element={<OurFacility />} />
-          <Route path="our-lab" element={<OurLab />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="careers" element={<Careers />} />
-          <Route path="careers/:jobId" element={<JobApplication />} />
-          <Route path="thank-you" element={<ThankYou />} />
+          <Route path="about" element={<Suspense fallback={<PageLoader />}><About /></Suspense>} />
+          <Route path="products" element={<Suspense fallback={<PageLoader />}><Products /></Suspense>} />
+          <Route path="products/automobile-ced" element={<Suspense fallback={<PageLoader />}><AutomobileCED /></Suspense>} />
+          <Route path="products/refrigeration" element={<Suspense fallback={<PageLoader />}><Refrigeration /></Suspense>} />
+          <Route path="process" element={<Suspense fallback={<PageLoader />}><Process /></Suspense>} />
+          <Route path="our-facility" element={<Suspense fallback={<PageLoader />}><OurFacility /></Suspense>} />
+          <Route path="our-lab" element={<Suspense fallback={<PageLoader />}><OurLab /></Suspense>} />
+          <Route path="contact" element={<Suspense fallback={<PageLoader />}><Contact /></Suspense>} />
+          <Route path="careers" element={<Suspense fallback={<PageLoader />}><Careers /></Suspense>} />
+          <Route path="careers/:jobId" element={<Suspense fallback={<PageLoader />}><JobApplication /></Suspense>} />
+          <Route path="thank-you" element={<Suspense fallback={<PageLoader />}><ThankYou /></Suspense>} />
         </Route>
       </Routes>
     </BrowserRouter>
