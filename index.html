@@ -9,26 +9,62 @@
   <meta name="description"
     content="Leading manufacturer of Wire on Tube Condensers and CED Coating in Aurangabad. 18+ years of precision engineering excellence." />
 
-  <!-- Preload critical fonts for faster text rendering -->
+  <!-- DNS Prefetch for faster external resources -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+
+  <!-- Preconnect for faster font loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Preload critical fonts -->
   <link rel="preload" as="style"
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Rajdhani:wght@500;700&display=swap" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Rajdhani:wght@500;700&display=swap" />
 
-  <!-- Preload logo for fast intro -->
+  <!-- Preload critical images for instant display -->
   <link rel="preload" as="image" href="/images/logo_removebg.png" />
+  <link rel="preload" as="image" href="/images/hero_slide_1.jpg" />
+  <link rel="preload" as="image" href="/images/hero_slide_2.jpg" />
+  <link rel="preload" as="image" href="/images/hero_slide_3.jpg" />
 
-  <!-- Critical CSS for intro animation -->
+  <!-- Preload 3D models (small draco-compressed versions) -->
+  <link rel="prefetch" as="fetch" href="/models/spring-draco.glb" crossorigin />
+  <link rel="prefetch" as="fetch" href="/models/Ced Coated 9-draco.glb" crossorigin />
+  <link rel="prefetch" as="fetch" href="/models/Ced Coated 2-draco.glb" crossorigin />
+
+  <!-- Critical CSS for instant display -->
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       background: #fff;
+      font-family: 'Outfit', sans-serif;
     }
 
     #root {
       min-height: 100vh;
+    }
+
+    /* Skeleton loading animation */
+    @keyframes shimmer {
+      0% {
+        background-position: -200% 0;
+      }
+
+      100% {
+        background-position: 200% 0;
+      }
+    }
+
+    .skeleton {
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite;
     }
   </style>
 </head>

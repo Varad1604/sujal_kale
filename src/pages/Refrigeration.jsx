@@ -97,6 +97,9 @@ export const Refrigeration = () => {
                                         <img
                                             src={product.image}
                                             alt={product.name}
+                                            loading="eager"
+                                            decoding="async"
+                                            fetchpriority="high"
                                             style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                                         />
                                     </div>

@@ -3,6 +3,12 @@ import { lazy, Suspense } from 'react'
 import { Layout } from './components/Layout'
 import { Home } from './pages/Home'
 import { ScrollToTop } from './components/ScrollToTop'
+import { useGLTF } from '@react-three/drei'
+
+// Preload ALL 3D models at app startup for instant rendering later
+useGLTF.preload('/models/spring-draco.glb')
+useGLTF.preload('/models/Ced Coated 9-draco.glb')
+useGLTF.preload('/models/Ced Coated 2-draco.glb')
 
 // Lazy load all pages except Home for faster initial load
 const About = lazy(() => import('./pages/About').then(m => ({ default: m.About })))
