@@ -363,16 +363,11 @@ button {
   }
 }
 
-/* 3D Canvas Mobile Touch Optimization */
-canvas {
-  touch-action: none;
-  /* Prevent browser gestures on 3D canvas */
-}
-
+/* 3D Canvas Touch - only disable on active simulation overlay */
 @media (max-width: 768px) {
 
-  /* Better touch handling for 3D product simulations */
-  .product-simulation-overlay.is-simulation {
-    touch-action: manipulation;
+  /* Allow normal page scrolling, only block on active 3D simulation */
+  .product-simulation-overlay.is-simulation canvas {
+    touch-action: none;
   }
 }

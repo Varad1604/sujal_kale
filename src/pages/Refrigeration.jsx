@@ -23,22 +23,22 @@ export const Refrigeration = () => {
         return () => setActiveProduct(null)
     }, [setActiveProduct])
 
-    // Prevent Page Scroll/Zoom on Wheel/Touch only when active product is open
+    // Prevent Page Zoom on Wheel only when 3D simulation is active (not static images)
     useEffect(() => {
-        const preventDefault = (e) => {
-            e.preventDefault()
+        const isSimulation = activeProduct && !activeProductData?.isStatic
+
+        const preventZoom = (e) => {
+            if (e.ctrlKey) e.preventDefault() // Only prevent ctrl+scroll zoom
         }
 
-        if (activeProduct) {
-            window.addEventListener('wheel', preventDefault, { passive: false })
-            window.addEventListener('touchmove', preventDefault, { passive: false })
+        if (isSimulation) {
+            window.addEventListener('wheel', preventZoom, { passive: false })
         }
 
         return () => {
-            window.removeEventListener('wheel', preventDefault)
-            window.removeEventListener('touchmove', preventDefault)
+            window.removeEventListener('wheel', preventZoom)
         }
-    }, [activeProduct])
+    }, [activeProduct, activeProductData])
     return (
         <motion.div
             initial={{ opacity: 0 }}
