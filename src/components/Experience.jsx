@@ -167,7 +167,7 @@ const DetailedProductScene = ({ product }) => {
     )
     if (product === 'Industrial Spring') return (
         <Center top>
-            <group>
+            <group position={[1.5, 0, 0]}> {/* Offset to center - Spring GLB origin is off-center */}
                 <SpringModel scale={0.02} />
             </group>
         </Center>
