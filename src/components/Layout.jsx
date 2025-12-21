@@ -221,10 +221,8 @@ export const Layout = () => {
                 {showIntro && <SonyIntro key="sony-intro" />}
             </AnimatePresence>
 
-            {/* 3D Background - Only load on product pages that need it */}
-            {(location.pathname === '/products/automobile-ced' || location.pathname === '/products/refrigeration') && (
-                <CanvasContainer />
-            )}
+            {/* 3D Background - ONLY when 3D simulation is actively being viewed */}
+            {isImmersiveMode && <CanvasContainer />}
 
             {/* Navigation Bar - Hidden during immersive simulation mode */}
             <header style={{
