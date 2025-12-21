@@ -97,7 +97,8 @@ export const Home = () => {
                                 style={{
                                     width: '100%',
                                     height: '100%',
-                                    objectFit: 'cover'
+                                    objectFit: 'cover',
+                                    objectPosition: 'center center' // Center the image better on mobile
                                 }}
                             />
                         ) : (
@@ -124,14 +125,17 @@ export const Home = () => {
                     </motion.div>
                 </AnimatePresence>
 
-                {/* Enhanced Gradient Overlay - stronger on left */}
+                {/* Enhanced Gradient Overlay - polished look on all devices */}
                 <div style={{
                     position: 'absolute',
                     top: 0,
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    background: 'linear-gradient(90deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.3) 100%)',
+                    background: `
+                        linear-gradient(90deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.3) 100%),
+                        linear-gradient(180deg, rgba(0,0,0,0.3) 0%, transparent 20%, transparent 80%, rgba(0,0,0,0.5) 100%)
+                    `,
                     zIndex: 1
                 }} />
 
