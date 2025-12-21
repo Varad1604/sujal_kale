@@ -370,4 +370,19 @@ button {
   .product-simulation-overlay.is-simulation canvas {
     touch-action: none;
   }
+
+  /* Clients Marquee - Full width on mobile like Director's Message */
+  .clients-marquee {
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 1.5rem 0 !important;
+    box-shadow: none !important;
+    margin-left: -2rem !important;
+    margin-right: -2rem !important;
+    width: calc(100% + 4rem) !important;
+  }
+
+  .clients-marquee h3 {
+    padding-left: 1rem;
+  }
 }

@@ -264,8 +264,8 @@ export const Home = () => {
                             ))}
                         </div>
 
-                        {/* Clients Marquee */}
-                        <div style={{
+                        {/* Clients Marquee - Full width on mobile via CSS */}
+                        <div className="clients-marquee" style={{
                             border: '1px solid rgba(0,0,0,0.1)',
                             borderRadius: '16px',
                             padding: '2rem',
