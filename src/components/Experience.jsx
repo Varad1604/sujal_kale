@@ -166,9 +166,11 @@ const DetailedProductScene = ({ product }) => {
         </Center>
     )
     if (product === 'Industrial Spring') return (
-        <group position={[2, -1.5, 0]}> {/* Better centered position for mobile */}
-            <SpringModel scale={0.02} />
-        </group>
+        <Center top>
+            <group>
+                <SpringModel scale={0.02} />
+            </group>
+        </Center>
     )
     if (product === 'Domestic Condenser' || product === '2 row condenser') return (
         <Center top>
