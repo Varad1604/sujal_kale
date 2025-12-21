@@ -214,7 +214,7 @@ export const Home = () => {
                         </div>
 
                         {/* Company Stats */}
-                        <div style={{
+                        <div className="company-stats" style={{
                             display: 'grid',
                             gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
                             gap: '1rem',

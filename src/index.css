@@ -371,6 +371,17 @@ button {
     touch-action: none;
   }
 
+  /* Company Stats - Full width on mobile like Director's Message */
+  .company-stats {
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 2rem 1rem !important;
+    box-shadow: none !important;
+    margin-left: -2rem !important;
+    margin-right: -2rem !important;
+    width: calc(100% + 4rem) !important;
+  }
+
   /* Clients Marquee - Full width on mobile like Director's Message */
   .clients-marquee {
     border: none !important;
