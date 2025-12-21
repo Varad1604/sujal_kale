@@ -144,16 +144,17 @@ export const AutomobileCED = () => {
                             display: 'flex',
                             flexDirection: 'column',
                             justifyContent: 'flex-end',
-                            alignItems: 'center',
-                            padding: '1rem'
+                            alignItems: 'flex-start', // Left-aligned on desktop like Condenser
+                            padding: '1rem',
+                            paddingLeft: window.innerWidth > 768 ? '2rem' : '1rem' // More padding on desktop
                         }}
                         className="product-simulation-overlay is-simulation"
                     >
-                        {/* Content Card for Simulation - Centered like Condenser */}
+                        {/* Content Card for Simulation - Left-aligned on desktop like Condenser */}
                         <div className="glass-panel" style={{
                             padding: '1.5rem',
                             maxWidth: 'min(500px, 95vw)',
-                            width: '100%',
+                            width: window.innerWidth > 768 ? 'auto' : '100%', // Auto width on desktop
                             marginBottom: '1rem',
                             background: 'rgba(255, 255, 255, 0.9)',
                             backdropFilter: 'blur(10px)',
