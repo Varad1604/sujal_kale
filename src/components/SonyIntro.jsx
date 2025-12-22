@@ -54,8 +54,7 @@ export const SonyIntro = () => {
                         width: '20px',
                         height: '20px',
                         borderRadius: '50%',
-                        background: 'var(--color-primary, #FFB162)',
-                        filter: 'blur(8px)',
+                        background: 'radial-gradient(circle, var(--color-primary, #FFB162) 0%, transparent 70%)',
                         pointerEvents: 'none'
                     }}
                 />
@@ -81,14 +80,12 @@ export const SonyIntro = () => {
                         initial={{
                             scale: 0.3,
                             opacity: 0,
-                            rotateY: 90,
-                            filter: 'blur(20px)'
+                            rotateY: 90
                         }}
                         animate={{
                             scale: 1,
                             opacity: 1,
-                            rotateY: 0,
-                            filter: 'blur(0px)'
+                            rotateY: 0
                         }}
                         transition={{
                             duration: 0.8,
