@@ -97,16 +97,36 @@ export const Home = () => {
                         }}
                     >
                         {slides[currentSlide].type === 'image' ? (
-                            <img
-                                src={slides[currentSlide].src}
-                                alt="Slide"
-                                style={{
+                            <>
+                                {/* Blurred Background for Fill */}
+                                <div style={{
+                                    position: 'absolute',
+                                    top: 0,
+                                    left: 0,
                                     width: '100%',
                                     height: '100%',
-                                    objectFit: 'cover',
-                                    objectPosition: 'center center'
-                                }}
-                            />
+                                    backgroundImage: `url(${slides[currentSlide].src})`,
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center',
+                                    filter: 'blur(20px) brightness(0.8)',
+                                    transform: 'scale(1.1)', // Prevent blur edges
+                                    zIndex: -1
+                                }} />
+                                {/* Main Sharp Image */}
+                                <img
+                                    src={slides[currentSlide].src}
+                                    alt="Slide"
+                                    style={{
+                                        width: '100%',
+                                        height: '100%',
+                                        objectFit: 'contain',
+                                        objectPosition: 'center center',
+                                        position: 'relative',
+                                        zIndex: 1,
+                                        filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.3))'
+                                    }}
+                                />
+                            </>
                         ) : (
                             <div style={{
                                 width: '100%',
