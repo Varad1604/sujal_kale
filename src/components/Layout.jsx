@@ -184,7 +184,7 @@ export const Layout = () => {
 
         const timer = setTimeout(() => {
             setShowIntro(false)
-        }, 4000) // Tagline finishes at ~2.5s, extra 1.5s to read
+        }, 3300) // Tagline finishes at ~2.5s, extra 0.8s to read
         return () => clearTimeout(timer)
     }, [showIntro])
 
