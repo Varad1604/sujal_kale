@@ -105,11 +105,9 @@ const NavItem = ({ item, mobile = false, onClick }) => {
                     style={{
                         position: 'absolute',
                         top: '100%',
-                        left: item.label === 'Contact' ? 'auto' : '50%',
-                        right: item.label === 'Contact' ? 0 : 'auto',
-                        transform: item.label === 'Contact' ? 'none' : 'translateX(-50%)',
+                        left: 0,
                         paddingTop: '1rem', // Creates a bridge for the mouse
-                        minWidth: '200px',
+                        minWidth: '150px',
                         display: 'flex',
                         flexDirection: 'column',
                         zIndex: 20
