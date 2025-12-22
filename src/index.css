@@ -397,10 +397,22 @@ button {
     padding-left: 1rem;
   }
 
-  /* CED Coating card - center on mobile */
+  /* CED Coating card - center on mobile, no scroll */
   .ced-overlay {
     align-items: center !important;
-    padding-top: 6rem !important;
+    padding-top: 5rem !important;
+    overflow: hidden !important;
+  }
+
+  .ced-overlay .glass-panel {
+    padding: 1rem !important;
+    margin: 0 !important;
+    max-height: calc(100vh - 6rem) !important;
+    overflow: hidden !important;
+  }
+
+  .ced-overlay .glass-panel img {
+    max-height: 40vh !important;
   }
 
   /* Bigger client logos on mobile */
