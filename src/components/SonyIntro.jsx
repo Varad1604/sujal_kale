@@ -158,8 +158,8 @@ export const SonyIntro = () => {
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{
-                                delay: 0.8 + index * 0.025,
-                                duration: 0.1,
+                                delay: 1.0 + index * 0.04,
+                                duration: 0.15,
                                 ease: "easeOut"
                             }}
                             style={{
