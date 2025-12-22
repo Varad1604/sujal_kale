@@ -32,14 +32,14 @@ export const Home = () => {
     const [currentSlide, setCurrentSlide] = useState(0)
 
     const slides = [
-        { type: 'product', src: '/images/1_to_6_row_condesner-removebg.png', bg: '#1a1a2e' },
-        { type: 'product', src: '/images/5_row_condenser-removebg.png', bg: '#16213e' },
-        { type: 'product', src: '/images/2_row_condenser-removebg-preview.png', bg: '#0f3460' },
-        { type: 'product', src: '/images/2_3wheeler_suspensions_-removebg.png', bg: '#1a1a2e' },
-        { type: 'product', src: '/images/Heavy_Duty_vechile_Suspension-removebg.png', bg: '#16213e' },
-        { type: 'product', src: '/images/Solar_Expansion_Suspension-removebg.png', bg: '#0f3460' },
-        { type: 'product', src: '/images/Small_automobile_parts_-removebg.png', bg: '#1a1a2e' },
-        { type: 'product', src: '/images/heat_sink-removebg.png', bg: '#16213e' }
+        { type: 'product', src: '/images/1_to_6_row_condesner-removebg.png', bg: 'transparent' },
+        { type: 'product', src: '/images/5_row_condenser-removebg.png', bg: 'transparent' },
+        { type: 'product', src: '/images/2_row_condenser-removebg-preview.png', bg: 'transparent' },
+        { type: 'product', src: '/images/2_3wheeler_suspensions_-removebg.png', bg: 'transparent' },
+        { type: 'product', src: '/images/Heavy_Duty_vechile_Suspension-removebg.png', bg: 'transparent' },
+        { type: 'product', src: '/images/Solar_Expansion_Suspension-removebg.png', bg: 'transparent' },
+        { type: 'product', src: '/images/Small_automobile_parts_-removebg.png', bg: 'transparent' },
+        { type: 'product', src: '/images/heat_sink-removebg.png', bg: 'transparent' }
     ]
 
     useEffect(() => {
