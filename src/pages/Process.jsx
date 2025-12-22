@@ -92,6 +92,7 @@ export const Process = () => {
                 ) : activeProcess === 'CED Coating' ? (
                     <motion.div
                         key="overlay"
+                        className="ced-overlay"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}

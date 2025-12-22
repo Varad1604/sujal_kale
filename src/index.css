@@ -396,4 +396,25 @@ button {
   .clients-marquee h3 {
     padding-left: 1rem;
   }
+
+  /* CED Coating card - center on mobile */
+  .ced-overlay {
+    align-items: center !important;
+    padding-top: 6rem !important;
+  }
+
+  /* Bigger client logos on mobile */
+  .client-logo {
+    max-width: 120px !important;
+    max-height: 80px !important;
+  }
+
+  .client-logo-container {
+    height: 120px !important;
+    padding: 1rem !important;
+  }
+
+  .client-card {
+    min-width: 200px !important;
+  }
 }
