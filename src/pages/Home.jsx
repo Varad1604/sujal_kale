@@ -72,10 +72,9 @@ export const Home = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
-                padding: '0 1rem', // Standardized padding
+                padding: '0 1rem',
                 position: 'relative',
-                overflow: 'hidden', // Ensure slides don't overflow
-                background: '#000'
+                overflow: 'hidden'
             }}>
                 {/* Carousel Background */}
                 <AnimatePresence>
