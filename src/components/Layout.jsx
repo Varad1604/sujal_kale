@@ -184,7 +184,7 @@ export const Layout = () => {
 
         const timer = setTimeout(() => {
             setShowIntro(false)
-        }, 3000) // Extended intro for tagline visibility
+        }, 4000) // Tagline finishes at ~2.5s, extra 1.5s to read
         return () => clearTimeout(timer)
     }, [showIntro])
 
