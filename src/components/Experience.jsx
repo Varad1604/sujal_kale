@@ -269,8 +269,8 @@ export const Experience = () => {
                 <DetailedProductScene product={activeProduct} />
             )}
 
-            <EffectComposer disableNormalPass>
-                <Bloom luminanceThreshold={1} mipmapBlur intensity={1.5} radius={0.6} />
+            <EffectComposer disableNormalPass multisampling={0}>
+                <Bloom luminanceThreshold={1} intensity={1.5} radius={0.4} />
                 {/* Vignette removed for clean background */}
                 {/* <Vignette eskil={false} offset={0.1} darkness={1.1} /> */}
             </EffectComposer>
