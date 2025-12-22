@@ -32,10 +32,16 @@ export const Home = () => {
     const [currentSlide, setCurrentSlide] = useState(0)
 
     const slides = [
-        { type: 'image', src: '/images/1 to 6 row condesner.jpg' },
-        { type: 'image', src: '/images/hero_slide_1.jpg' },
-        { type: 'image', src: '/images/hero_slide_2.jpg' },
-        { type: 'image', src: '/images/hero_slide_3.jpg' }
+        { type: 'image', src: '/images/carousel_1.jpg' },
+        { type: 'image', src: '/images/carousel_2.jpg' },
+        { type: 'image', src: '/images/carousel_3.jpg' },
+        { type: 'image', src: '/images/carousel_4.jpg' },
+        { type: 'image', src: '/images/carousel_5.jpg' },
+        { type: 'image', src: '/images/carousel_6.jpg' },
+        { type: 'image', src: '/images/carousel_7.jpg' },
+        { type: 'image', src: '/images/carousel_8.jpg' },
+        { type: 'image', src: '/images/carousel_9.jpg' },
+        { type: 'image', src: '/images/carousel_10.jpg' }
     ]
 
     useEffect(() => {
