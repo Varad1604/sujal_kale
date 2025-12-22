@@ -83,8 +83,8 @@ export const Home = () => {
                 <AnimatePresence>
                     <motion.div
                         key={currentSlide}
-                        initial={{ opacity: 0, scale: 1.05 }}
-                        animate={{ opacity: 1, scale: 1 }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 1.0, ease: "easeInOut" }}
                         style={{
@@ -139,8 +139,8 @@ export const Home = () => {
                     width: '100%',
                     height: '100%',
                     background: `
-                        linear-gradient(90deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.3) 100%),
-                        linear-gradient(180deg, rgba(0,0,0,0.3) 0%, transparent 20%, transparent 80%, rgba(0,0,0,0.5) 100%)
+                        linear-gradient(90deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%),
+                        linear-gradient(180deg, rgba(0,0,0,0.1) 0%, transparent 20%, transparent 80%, rgba(0,0,0,0.3) 100%)
                     `,
                     zIndex: 1
                 }} />
