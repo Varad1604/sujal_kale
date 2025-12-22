@@ -103,14 +103,13 @@ export const Process = () => {
                             width: '100%',
                             height: '100%',
                             zIndex: 20,
-                            pointerEvents: 'auto', // Enable scrolling on the overlay
+                            pointerEvents: 'auto',
                             display: 'flex',
                             justifyContent: 'center',
-                            alignItems: 'flex-start', // Align to top to prevent clipping
+                            alignItems: 'flex-start',
                             background: 'rgba(255,255,255,0.95)',
                             padding: '1rem',
-                            paddingTop: '8rem', // Increased top padding to clear the navbar
-                            overflowY: 'auto' // Allow container to scroll
+                            paddingTop: '8rem'
                         }}
                     >
                         <div className="glass-panel" style={{

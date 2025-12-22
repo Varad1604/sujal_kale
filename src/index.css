@@ -53,6 +53,11 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
+/* CED overlay - desktop default (allow scroll) */
+.ced-overlay {
+  overflow-y: auto;
+}
+
 .text-gradient {
   background: linear-gradient(to right, var(--color-primary), #FF8C00);
   background-clip: text;
@@ -401,18 +406,28 @@ button {
   .ced-overlay {
     align-items: center !important;
     padding-top: 5rem !important;
-    overflow: hidden !important;
+    overflow-y: hidden !important;
   }
 
   .ced-overlay .glass-panel {
-    padding: 1rem !important;
+    padding: 1.5rem !important;
     margin: 0 !important;
-    max-height: calc(100vh - 6rem) !important;
+    max-height: 85vh !important;
     overflow: hidden !important;
   }
 
+  .ced-overlay .glass-panel h2 {
+    font-size: 1.5rem !important;
+    margin-bottom: 0.3rem !important;
+  }
+
+  .ced-overlay .glass-panel p {
+    font-size: 0.85rem !important;
+    margin-bottom: 1rem !important;
+  }
+
   .ced-overlay .glass-panel img {
-    max-height: 40vh !important;
+    max-height: 35vh !important;
   }
 
   /* Bigger client logos on mobile */
