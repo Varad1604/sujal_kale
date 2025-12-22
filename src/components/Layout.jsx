@@ -105,7 +105,8 @@ const NavItem = ({ item, mobile = false, onClick }) => {
                     style={{
                         position: 'absolute',
                         top: '100%',
-                        left: 0,
+                        left: item.label === 'Contact' ? 'auto' : 0,
+                        right: item.label === 'Contact' ? 0 : 'auto',
                         paddingTop: '1rem', // Creates a bridge for the mouse
                         minWidth: '150px',
                         display: 'flex',
