@@ -103,8 +103,8 @@ export const Home = () => {
                                 style={{
                                     width: '100%',
                                     height: '100%',
-                                    objectFit: 'cover',
-                                    objectPosition: 'center center' // Center the image better on mobile
+                                    objectFit: 'contain',
+                                    objectPosition: 'center center'
                                 }}
                             />
                         ) : (
