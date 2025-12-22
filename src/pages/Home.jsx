@@ -67,7 +67,7 @@ export const Home = () => {
 
 
             {/* Hero Section */}
-            <section style={{
+            <section className="hero-section" style={{
                 minHeight: '80vh',
                 display: 'flex',
                 flexDirection: 'column',
@@ -77,66 +77,68 @@ export const Home = () => {
                 overflow: 'hidden'
             }}>
                 {/* Carousel Background */}
-                <AnimatePresence>
-                    <motion.div
-                        key={currentSlide}
-                        initial={{ opacity: 0, scale: 1.05 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 1.0, ease: "easeInOut" }}
-                        style={{
-                            position: 'absolute',
-                            top: 0,
-                            left: 0,
-                            width: '100%',
-                            height: '100%',
-                            zIndex: 0
-                        }}
-                    >
-                        {slides[currentSlide].type === 'image' ? (
-                            <img
-                                src={slides[currentSlide].src}
-                                alt="Slide"
-                                style={{
-                                    width: '100%',
-                                    height: '100%',
-                                    objectFit: 'cover',
-                                    objectPosition: 'center center' // Center the image better on mobile
-                                }}
-                            />
-                        ) : (
-                            <div style={{
+                <div className="hero-carousel-bg">
+                    <AnimatePresence>
+                        <motion.div
+                            key={currentSlide}
+                            initial={{ opacity: 0, scale: 1.05 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 1.0, ease: "easeInOut" }}
+                            style={{
+                                position: 'absolute',
+                                top: 0,
+                                left: 0,
                                 width: '100%',
                                 height: '100%',
-                                background: slides[currentSlide].bg,
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center'
-                            }}>
+                                zIndex: 0
+                            }}
+                        >
+                            {slides[currentSlide].type === 'image' ? (
                                 <img
                                     src={slides[currentSlide].src}
-                                    alt="Product"
+                                    alt="Slide"
                                     style={{
-                                        maxWidth: '80%',
-                                        maxHeight: '80%',
-                                        objectFit: 'contain',
-                                        filter: 'drop-shadow(0 20px 30px rgba(0,0,0,0.3))'
+                                        width: '100%',
+                                        height: '100%',
+                                        objectFit: 'cover',
+                                        objectPosition: 'center center'
                                     }}
                                 />
-                            </div>
-                        )}
-                    </motion.div>
-                </AnimatePresence>
+                            ) : (
+                                <div style={{
+                                    width: '100%',
+                                    height: '100%',
+                                    background: slides[currentSlide].bg,
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                }}>
+                                    <img
+                                        src={slides[currentSlide].src}
+                                        alt="Product"
+                                        style={{
+                                            maxWidth: '80%',
+                                            maxHeight: '80%',
+                                            objectFit: 'contain',
+                                            filter: 'drop-shadow(0 20px 30px rgba(0,0,0,0.3))'
+                                        }}
+                                    />
+                                </div>
+                            )}
+                        </motion.div>
+                    </AnimatePresence>
+                </div>
 
 
 
-                <div style={{
+                <div className="hero-content" style={{
                     position: 'relative',
                     zIndex: 2,
-                    maxWidth: '1400px', // Standardized max-width
+                    maxWidth: '1400px',
                     width: '100%',
                     margin: '0 auto',
-                    pointerEvents: 'auto' // Enable interaction for content
+                    pointerEvents: 'auto'
                 }}>
 
 
