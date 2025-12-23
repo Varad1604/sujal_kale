@@ -28,7 +28,7 @@ export const OurLab = () => {
                 <h2 style={{ fontSize: '2rem', marginBottom: '3rem', textAlign: 'center', color: 'var(--color-secondary)' }}>Testing Capabilities</h2>
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
+                    gridTemplateColumns: 'repeat(2, 1fr)',
                     gap: '2rem'
                 }}>
                     <div className="glass-panel" style={{ padding: '0', overflow: 'hidden', textAlign: 'left' }}>
