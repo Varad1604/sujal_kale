@@ -13,8 +13,8 @@ const products = [
     { id: 'solar_ext', name: 'Solar Extension Suspension', image: '/images/Solar_Extension_Suspension-removebg.png', hasSimulation: false },
     { id: 'steering_yoke', name: 'Steering Lower Yoke Assembly', image: '/images/Streeing_Lower_Yoke_assembly_-removebg.png', hasSimulation: false },
     { id: 'small_auto', name: 'Small Automobile Parts', image: '/images/Small_automobile_parts_-removebg.png', hasSimulation: false },
-    { id: 'heavy_susp', name: 'Heavy Duty Vehicle Suspension', image: '/images/Heavy_Duty_vechile_Suspension-removebg.png', hasSimulation: false },
-    { id: 'susp_2_3', name: '2&3 Wheeler Suspensions', image: '/images/2_3wheeler_suspensions_-removebg.png', hasSimulation: false },
+    { id: 'heavy_susp', name: 'Heavy Duty Vehicle Suspension', image: '/images/Heavy Duty Suspensions.jpeg', hasSimulation: false },
+    { id: 'susp_2_3', name: '2&3 Wheeler Suspensions', image: '/images/TWO Wheeler Suspensions.jpeg', hasSimulation: false },
 ]
 
 export const AutomobileCED = () => {
