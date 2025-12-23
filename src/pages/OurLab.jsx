@@ -31,11 +31,17 @@ export const OurLab = () => {
                     gridTemplateColumns: 'repeat(2, 1fr)',
                     gap: '2rem'
                 }}>
-                    <div className="glass-panel" style={{ padding: '0', overflow: 'hidden', textAlign: 'left' }}>
+                    {/* Chemical Testing */}
+                    <div
+                        className="glass-panel"
+                        style={{ padding: '0', overflow: 'hidden', textAlign: 'left', transition: 'transform 0.3s, background 0.3s' }}
+                        onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.02)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)'; }}
+                        onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)'; }}
+                    >
                         <img
                             src="/images/lab_chemical.jpg"
                             alt="Chemical Testing & Analysis Laboratory"
-                            style={{ width: '100%', height: '250px', objectFit: 'cover' }}
+                            style={{ width: '100%', aspectRatio: '16/10', objectFit: 'cover' }}
                         />
                         <div style={{ padding: '2rem' }}>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--color-primary)' }}>Chemical Testing & Analysis Laboratory</h3>
@@ -43,11 +49,17 @@ export const OurLab = () => {
                         </div>
                     </div>
 
-                    <div className="glass-panel" style={{ padding: '0', overflow: 'hidden', textAlign: 'left' }}>
+                    {/* Salt Spray */}
+                    <div
+                        className="glass-panel"
+                        style={{ padding: '0', overflow: 'hidden', textAlign: 'left', transition: 'transform 0.3s, background 0.3s' }}
+                        onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.02)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)'; }}
+                        onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)'; }}
+                    >
                         <img
                             src="/images/lab_saltspray.jpg"
                             alt="Salt Spray & Corrosion Testing Facility"
-                            style={{ width: '100%', height: '250px', objectFit: 'cover' }}
+                            style={{ width: '100%', aspectRatio: '16/10', objectFit: 'cover' }}
                         />
                         <div style={{ padding: '2rem' }}>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--color-primary)' }}>Salt Spray & Corrosion Testing Facility</h3>
@@ -55,11 +67,17 @@ export const OurLab = () => {
                         </div>
                     </div>
 
-                    <div className="glass-panel" style={{ padding: '0', overflow: 'hidden', textAlign: 'left' }}>
+                    {/* Precision Measurement */}
+                    <div
+                        className="glass-panel"
+                        style={{ padding: '0', overflow: 'hidden', textAlign: 'left', transition: 'transform 0.3s, background 0.3s' }}
+                        onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.02)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)'; }}
+                        onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)'; }}
+                    >
                         <img
                             src="/images/lab_precision.png"
                             alt="Precision Measurement & Inspection Instruments"
-                            style={{ width: '100%', height: '250px', objectFit: 'cover' }}
+                            style={{ width: '100%', aspectRatio: '16/10', objectFit: 'cover' }}
                         />
                         <div style={{ padding: '2rem' }}>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--color-primary)' }}>Precision Measurement & Inspection Instruments</h3>
@@ -67,11 +85,17 @@ export const OurLab = () => {
                         </div>
                     </div>
 
-                    <div className="glass-panel" style={{ padding: '0', overflow: 'hidden', textAlign: 'left' }}>
+                    {/* Hot Air Oven */}
+                    <div
+                        className="glass-panel"
+                        style={{ padding: '0', overflow: 'hidden', textAlign: 'left', transition: 'transform 0.3s, background 0.3s' }}
+                        onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.02)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)'; }}
+                        onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)'; }}
+                    >
                         <img
                             src="/images/lab_oven.jpg"
                             alt="Hot Air Oven & Thermal Testing Area"
-                            style={{ width: '100%', height: '250px', objectFit: 'cover' }}
+                            style={{ width: '100%', aspectRatio: '16/10', objectFit: 'cover' }}
                         />
                         <div style={{ padding: '2rem' }}>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--color-primary)' }}>Hot Air Oven & Thermal Testing Area</h3>
