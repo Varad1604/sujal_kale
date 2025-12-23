@@ -38,11 +38,13 @@ export const OurLab = () => {
                         onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.02)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)'; }}
                         onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)'; }}
                     >
-                        <img
-                            src="/images/lab_chemical.jpg"
-                            alt="Chemical Testing & Analysis Laboratory"
-                            style={{ width: '100%', aspectRatio: '16/10', objectFit: 'cover' }}
-                        />
+                        <div style={{ width: '100%', height: '300px', background: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <img
+                                src="/images/lab_chemical.jpg"
+                                alt="Chemical Testing & Analysis Laboratory"
+                                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                            />
+                        </div>
                         <div style={{ padding: '2rem' }}>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--color-primary)' }}>Chemical Testing & Analysis Laboratory</h3>
                             <p style={{ color: 'var(--color-text-muted)' }}>Spectroscopic analysis to verify raw material composition and integrity before manufacturing begins.</p>
@@ -56,11 +58,13 @@ export const OurLab = () => {
                         onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.02)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)'; }}
                         onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)'; }}
                     >
-                        <img
-                            src="/images/lab_saltspray.jpg"
-                            alt="Salt Spray & Corrosion Testing Facility"
-                            style={{ width: '100%', aspectRatio: '16/10', objectFit: 'cover' }}
-                        />
+                        <div style={{ width: '100%', height: '300px', background: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <img
+                                src="/images/lab_saltspray.jpg"
+                                alt="Salt Spray & Corrosion Testing Facility"
+                                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                            />
+                        </div>
                         <div style={{ padding: '2rem' }}>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--color-primary)' }}>Salt Spray & Corrosion Testing Facility</h3>
                             <p style={{ color: 'var(--color-text-muted)' }}>Accelerated corrosion testing to ensure our CED coating provides maximum durability in harsh environments.</p>
@@ -74,11 +78,13 @@ export const OurLab = () => {
                         onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.02)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)'; }}
                         onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)'; }}
                     >
-                        <img
-                            src="/images/lab_precision.png"
-                            alt="Precision Measurement & Inspection Instruments"
-                            style={{ width: '100%', aspectRatio: '16/10', objectFit: 'cover' }}
-                        />
+                        <div style={{ width: '100%', height: '300px', background: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <img
+                                src="/images/lab_precision.png"
+                                alt="Precision Measurement & Inspection Instruments"
+                                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                            />
+                        </div>
                         <div style={{ padding: '2rem' }}>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--color-primary)' }}>Precision Measurement & Inspection Instruments</h3>
                             <p style={{ color: 'var(--color-text-muted)' }}>Verifying the mechanical strength and elasticity of components to ensure robust performance.</p>
@@ -92,11 +98,13 @@ export const OurLab = () => {
                         onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.02)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)'; }}
                         onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)'; }}
                     >
-                        <img
-                            src="/images/lab_oven.jpg"
-                            alt="Hot Air Oven & Thermal Testing Area"
-                            style={{ width: '100%', aspectRatio: '16/10', objectFit: 'cover' }}
-                        />
+                        <div style={{ width: '100%', height: '300px', background: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <img
+                                src="/images/lab_oven.jpg"
+                                alt="Hot Air Oven & Thermal Testing Area"
+                                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                            />
+                        </div>
                         <div style={{ padding: '2rem' }}>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--color-primary)' }}>Hot Air Oven & Thermal Testing Area</h3>
                             <p style={{ color: 'var(--color-text-muted)' }}>State-of-the-art thermal testing facility to test components under extreme temperatures ensuring reliability.</p>
