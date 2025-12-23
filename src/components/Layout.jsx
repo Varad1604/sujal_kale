@@ -190,7 +190,7 @@ export const Layout = () => {
 
     const navItems = [
         { label: 'Home', path: '/' },
-        { label: 'Who We Are', path: '/about' },
+        { label: 'Who We Are', path: '/who-we-are' },
         {
             label: 'Products',
             path: '/products'

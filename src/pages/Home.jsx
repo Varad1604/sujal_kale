@@ -178,7 +178,7 @@ export const Home = () => {
 
                     {/* EXPLORE US Button - at top */}
                     <div style={{ marginTop: '1rem', marginBottom: '1rem', pointerEvents: 'auto' }}>
-                        <Link to="/about" style={{ pointerEvents: 'auto', textDecoration: 'none' }}>
+                        <Link to="/who-we-are" style={{ pointerEvents: 'auto', textDecoration: 'none' }}>
                             <button style={{
                                 padding: '1rem 2rem',
                                 background: 'transparent',

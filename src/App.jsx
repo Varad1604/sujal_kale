@@ -51,7 +51,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="about" element={<Suspense fallback={<PageLoader />}><About /></Suspense>} />
+          <Route path="who-we-are" element={<Suspense fallback={<PageLoader />}><About /></Suspense>} />
           <Route path="products" element={<Suspense fallback={<PageLoader />}><Products /></Suspense>} />
           <Route path="products/automobile-ced" element={<Suspense fallback={<PageLoader />}><AutomobileCED /></Suspense>} />
           <Route path="products/refrigeration" element={<Suspense fallback={<PageLoader />}><Refrigeration /></Suspense>} />
