@@ -330,11 +330,11 @@ export const Home = () => {
                                             flexDirection: 'column',
                                             alignItems: 'center',
                                             justifyContent: 'center',
-                                            minWidth: 'min(300px, 80vw)',
-                                            opacity: 0.9, // Increased base opacity
+                                            minWidth: '350px', // Increased width
+                                            opacity: 0.9,
                                             transition: 'opacity 0.3s, transform 0.3s',
                                             cursor: 'pointer',
-                                            gap: '1.5rem' // Increased gap
+                                            gap: '2rem' // Increased gap
                                         }}
                                             onMouseEnter={(e) => {
                                                 e.currentTarget.style.opacity = 1
@@ -346,15 +346,15 @@ export const Home = () => {
                                             }}
                                         >
                                             <div className="client-logo-container" style={{
-                                                height: '160px',
+                                                height: '220px', // Increased height
                                                 width: '100%',
                                                 display: 'flex',
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
-                                                padding: '1rem', // Added padding
-                                                background: 'white', // Ensure white background for logos
-                                                borderRadius: '12px', // Rounded corners
-                                                boxShadow: '0 4px 15px rgba(0,0,0,0.05)' // Subtle shadow
+                                                padding: '2rem', // Increased padding
+                                                background: 'white',
+                                                borderRadius: '16px', // Slightly larger radius
+                                                boxShadow: '0 8px 25px rgba(0,0,0,0.08)' // Enhanced shadow
                                             }}>
                                                 <img
                                                     src={client.logo}
@@ -371,7 +371,7 @@ export const Home = () => {
                                                 />
                                             </div>
                                             <span style={{
-                                                fontSize: '1.4rem', // Increased from 1.1rem
+                                                fontSize: '1.6rem', // Increased font size
                                                 color: 'var(--color-text)',
                                                 fontWeight: 'bold',
                                                 letterSpacing: '0.5px',
