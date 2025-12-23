@@ -41,7 +41,8 @@ export const Home = () => {
         { type: 'image', src: '/images/carousel_7.jpg' },
         { type: 'image', src: '/images/carousel_8.jpg' },
         { type: 'image', src: '/images/carousel_9.jpg' },
-        { type: 'image', src: '/images/carousel_10.jpg' }
+        { type: 'image', src: '/images/carousel_10.jpg' },
+        { type: 'image', src: '/images/carousel_11.jpg' }
     ]
 
     useEffect(() => {
@@ -108,7 +109,7 @@ export const Home = () => {
                                     backgroundImage: `url(${slides[currentSlide].src})`,
                                     backgroundSize: 'cover',
                                     backgroundPosition: 'center',
-                                    filter: 'blur(20px) brightness(0.8)',
+                                    filter: 'brightness(0.8)',
                                     transform: 'scale(1.1)', // Prevent blur edges
                                     zIndex: -1
                                 }} />
