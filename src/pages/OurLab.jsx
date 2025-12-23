@@ -28,25 +28,55 @@ export const OurLab = () => {
                 <h2 style={{ fontSize: '2rem', marginBottom: '3rem', textAlign: 'center', color: 'var(--color-secondary)' }}>Testing Capabilities</h2>
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
                     gap: '2rem'
                 }}>
-                    <div className="glass-panel" style={{ padding: '2rem', textAlign: 'center' }}>
-                        <FaMicroscope size={40} color="var(--color-primary)" style={{ marginBottom: '1.5rem' }} />
-                        <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Material Analysis</h3>
-                        <p style={{ color: 'var(--color-text-muted)' }}>Spectroscopic analysis to verify raw material composition and integrity before manufacturing begins.</p>
+                    <div className="glass-panel" style={{ padding: '0', overflow: 'hidden', textAlign: 'left' }}>
+                        <img
+                            src="/images/lab_chemical.jpg"
+                            alt="Chemical Testing & Analysis Laboratory"
+                            style={{ width: '100%', height: '250px', objectFit: 'cover' }}
+                        />
+                        <div style={{ padding: '2rem' }}>
+                            <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--color-primary)' }}>Chemical Testing & Analysis Laboratory</h3>
+                            <p style={{ color: 'var(--color-text-muted)' }}>Spectroscopic analysis to verify raw material composition and integrity before manufacturing begins.</p>
+                        </div>
                     </div>
 
-                    <div className="glass-panel" style={{ padding: '2rem', textAlign: 'center' }}>
-                        <FaFlask size={40} color="var(--color-primary)" style={{ marginBottom: '1.5rem' }} />
-                        <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Salt Spray Test</h3>
-                        <p style={{ color: 'var(--color-text-muted)' }}>Accelerated corrosion testing to ensure our CED coating provides maximum durability in harsh environments.</p>
+                    <div className="glass-panel" style={{ padding: '0', overflow: 'hidden', textAlign: 'left' }}>
+                        <img
+                            src="/images/lab_saltspray.jpg"
+                            alt="Salt Spray & Corrosion Testing Facility"
+                            style={{ width: '100%', height: '250px', objectFit: 'cover' }}
+                        />
+                        <div style={{ padding: '2rem' }}>
+                            <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--color-primary)' }}>Salt Spray & Corrosion Testing Facility</h3>
+                            <p style={{ color: 'var(--color-text-muted)' }}>Accelerated corrosion testing to ensure our CED coating provides maximum durability in harsh environments.</p>
+                        </div>
                     </div>
 
-                    <div className="glass-panel" style={{ padding: '2rem', textAlign: 'center' }}>
-                        <FaCheckCircle size={40} color="var(--color-primary)" style={{ marginBottom: '1.5rem' }} />
-                        <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Tensile Testing</h3>
-                        <p style={{ color: 'var(--color-text-muted)' }}>Verifying the mechanical strength and elasticity of components to ensure robust performance.</p>
+                    <div className="glass-panel" style={{ padding: '0', overflow: 'hidden', textAlign: 'left' }}>
+                        <img
+                            src="/images/lab_precision.png"
+                            alt="Precision Measurement & Inspection Instruments"
+                            style={{ width: '100%', height: '250px', objectFit: 'cover' }}
+                        />
+                        <div style={{ padding: '2rem' }}>
+                            <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--color-primary)' }}>Precision Measurement & Inspection Instruments</h3>
+                            <p style={{ color: 'var(--color-text-muted)' }}>Verifying the mechanical strength and elasticity of components to ensure robust performance.</p>
+                        </div>
+                    </div>
+
+                    <div className="glass-panel" style={{ padding: '0', overflow: 'hidden', textAlign: 'left' }}>
+                        <img
+                            src="/images/lab_oven.jpg"
+                            alt="Hot Air Oven & Thermal Testing Area"
+                            style={{ width: '100%', height: '250px', objectFit: 'cover' }}
+                        />
+                        <div style={{ padding: '2rem' }}>
+                            <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--color-primary)' }}>Hot Air Oven & Thermal Testing Area</h3>
+                            <p style={{ color: 'var(--color-text-muted)' }}>State-of-the-art thermal testing facility to test components under extreme temperatures ensuring reliability.</p>
+                        </div>
                     </div>
                 </div>
             </section>
