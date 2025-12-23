@@ -105,23 +105,7 @@ export const OurLab = () => {
                 </div>
             </section>
 
-            {/* Lab Facilities Overview */}
-            <section>
-                <h2 style={{ fontSize: '2rem', marginBottom: '2rem', color: 'var(--color-secondary)', textAlign: 'center' }}>Lab Facilities Overview</h2>
-                <div className="glass-panel" style={{ padding: '1rem', overflow: 'hidden' }}>
-                    <img
-                        src="/images/lab_facilities_overview.jpg"
-                        alt="Sujal Industries Lab Facilities: Chemical Testing, Salt Spray, Precision Measurement, and Thermal Testing"
-                        style={{
-                            width: '100%',
-                            height: 'auto',
-                            display: 'block',
-                            borderRadius: '8px',
-                            boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
-                        }}
-                    />
-                </div>
-            </section>
+
         </motion.div>
     )
 }
