@@ -58,21 +58,22 @@ export const AutomobileCED = () => {
             exit={{ opacity: 0 }}
             style={{ padding: '4rem 10%', color: 'var(--color-text)', position: 'relative', minHeight: '100vh', pointerEvents: 'auto' }}
         >
-            {(!selectedProduct || selectedProduct.hasSimulation) && (
-                <Link to="/products" style={{
-                    display: 'inline-block',
-                    marginBottom: '2rem',
-                    color: 'var(--color-primary)',
-                    textDecoration: 'none',
-                    fontSize: '1.1rem',
-                    fontWeight: 'bold',
-                    pointerEvents: 'auto',
-                    position: 'relative',
-                    zIndex: 30
-                }}>
-                    ← Back to Products
-                </Link>
-            )}
+            {/* Back to Products link - only show when no overlay is active for clarity */
+                (!selectedProduct || selectedProduct.hasSimulation) && !activeProduct && (
+                    <Link to="/products" style={{
+                        display: 'inline-block',
+                        marginBottom: '2rem',
+                        color: 'var(--color-primary)',
+                        textDecoration: 'none',
+                        fontSize: '1.1rem',
+                        fontWeight: 'bold',
+                        pointerEvents: 'auto',
+                        position: 'relative',
+                        zIndex: 30
+                    }}>
+                        ← Back to Products
+                    </Link>
+                )}
 
             <AnimatePresence>
                 {!activeProduct ? (
@@ -163,6 +164,32 @@ export const AutomobileCED = () => {
                             maxHeight: '40vh',
                             overflowY: 'auto'
                         }}>
+                            <div style={{
+                                width: '100%',
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                                alignItems: 'center',
+                                marginBottom: '1rem'
+                            }}>
+                                <button
+                                    onClick={() => setActiveProduct(null)}
+                                    style={{
+                                        background: 'none',
+                                        border: 'none',
+                                        color: 'var(--color-primary)',
+                                        fontSize: '1rem',
+                                        fontWeight: 'bold',
+                                        cursor: 'pointer',
+                                        padding: 0,
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '0.5rem'
+                                    }}
+                                >
+                                    ← Back
+                                </button>
+                                {/* X button optional here since we have Back, but keeping for consistency */}
+                            </div>
                             <h2 style={{ fontSize: '1.8rem', color: 'var(--color-secondary)', marginBottom: '0.5rem' }}>
                                 {activeProduct}
                             </h2>

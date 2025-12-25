@@ -22,21 +22,22 @@ export const Process = () => {
             exit={{ opacity: 0 }}
             style={{ padding: '4rem 5%', color: 'var(--color-text)', position: 'relative', minHeight: '100vh' }}
         >
-            {activeProcess && (
-                <Link to="/process" onClick={() => setActiveProcess(null)} style={{
-                    display: 'inline-block',
-                    marginBottom: '2rem',
-                    color: 'var(--color-primary)',
-                    textDecoration: 'none',
-                    fontSize: '1.1rem',
-                    fontWeight: 'bold',
-                    pointerEvents: 'auto',
-                    position: 'relative',
-                    zIndex: 30
-                }}>
-                    ← Back to Process
-                </Link>
-            )}
+            {/* Back Process Link is now inside the overlay for better UX on mobile */
+                activeProcess && !['CED Coating', 'Condenser Manufacturing'].includes(activeProcess) && (
+                    <Link to="/process" onClick={() => setActiveProcess(null)} style={{
+                        display: 'inline-block',
+                        marginBottom: '2rem',
+                        color: 'var(--color-primary)',
+                        textDecoration: 'none',
+                        fontSize: '1.1rem',
+                        fontWeight: 'bold',
+                        pointerEvents: 'auto',
+                        position: 'relative',
+                        zIndex: 30
+                    }}>
+                        ← Back to Process
+                    </Link>
+                )}
 
             <AnimatePresence mode="wait">
                 {!activeProcess ? (
@@ -138,21 +139,43 @@ export const Process = () => {
                                 boxShadow: '0 20px 50px rgba(0,0,0,0.1)',
                                 borderRadius: '16px'
                             }}>
-                                <button
-                                    onClick={() => setActiveProcess(null)}
-                                    style={{
-                                        position: 'absolute',
-                                        top: '1rem',
-                                        right: '1rem',
-                                        background: 'none',
-                                        border: 'none',
-                                        fontSize: '1.5rem',
-                                        cursor: 'pointer',
-                                        color: 'var(--color-text)'
-                                    }}
-                                >
-                                    ✕
-                                </button>
+                                <div style={{
+                                    width: '100%',
+                                    display: 'flex',
+                                    justifyContent: 'space-between',
+                                    alignItems: 'center',
+                                    marginBottom: '1rem'
+                                }}>
+                                    <button
+                                        onClick={() => setActiveProcess(null)}
+                                        style={{
+                                            background: 'none',
+                                            border: 'none',
+                                            color: 'var(--color-primary)',
+                                            fontSize: '1rem',
+                                            fontWeight: 'bold',
+                                            cursor: 'pointer',
+                                            padding: 0,
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            gap: '0.5rem'
+                                        }}
+                                    >
+                                        ← Back
+                                    </button>
+                                    <button
+                                        onClick={() => setActiveProcess(null)}
+                                        style={{
+                                            background: 'none',
+                                            border: 'none',
+                                            fontSize: '1.5rem',
+                                            cursor: 'pointer',
+                                            color: 'var(--color-text)'
+                                        }}
+                                    >
+                                        ✕
+                                    </button>
+                                </div>
 
                                 <h2 style={{
                                     fontSize: '3rem',
@@ -284,21 +307,43 @@ export const Process = () => {
                             boxShadow: '0 20px 50px rgba(0,0,0,0.1)',
                             borderRadius: '16px'
                         }}>
-                            <button
-                                onClick={() => setActiveProcess(null)}
-                                style={{
-                                    position: 'absolute',
-                                    top: '1rem',
-                                    right: '1rem',
-                                    background: 'none',
-                                    border: 'none',
-                                    fontSize: '1.5rem',
-                                    cursor: 'pointer',
-                                    color: 'var(--color-text)'
-                                }}
-                            >
-                                ✕
-                            </button>
+                            <div style={{
+                                width: '100%',
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                                alignItems: 'center',
+                                marginBottom: '1rem'
+                            }}>
+                                <button
+                                    onClick={() => setActiveProcess(null)}
+                                    style={{
+                                        background: 'none',
+                                        border: 'none',
+                                        color: 'var(--color-primary)',
+                                        fontSize: '1rem',
+                                        fontWeight: 'bold',
+                                        cursor: 'pointer',
+                                        padding: 0,
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '0.5rem'
+                                    }}
+                                >
+                                    ← Back
+                                </button>
+                                <button
+                                    onClick={() => setActiveProcess(null)}
+                                    style={{
+                                        background: 'none',
+                                        border: 'none',
+                                        fontSize: '1.5rem',
+                                        cursor: 'pointer',
+                                        color: 'var(--color-text)'
+                                    }}
+                                >
+                                    ✕
+                                </button>
+                            </div>
 
                             <h2 style={{
                                 fontSize: '3rem',
