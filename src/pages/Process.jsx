@@ -195,7 +195,17 @@ export const Process = () => {
                                 minHeight: '200px', // Ensure height even if image fails
                                 background: '#f0f0f0' // Placeholder background
                             }}>
-                                <img src="/models/ced_animation_final.gif" alt="CED Coating Process 3D Visualization" style={{ width: '100%', display: 'block' }} />
+                                <video
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    poster="/images/hero_slide_1.jpg"
+                                    style={{ width: '100%', display: 'block', objectFit: 'cover' }}
+                                >
+                                    <source src="/models/CED.mp4" type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
                             </div>
                         </div>
 
