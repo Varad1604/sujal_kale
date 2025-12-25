@@ -139,7 +139,7 @@ export const AutomobileCED = () => {
                             left: 0,
                             width: '100%',
                             height: '100%',
-                            zIndex: 20,
+                            zIndex: 20000,
                             pointerEvents: 'none',
                             display: 'flex',
                             flexDirection: 'column',
@@ -203,8 +203,8 @@ export const AutomobileCED = () => {
                             flexDirection: 'column',
                             alignItems: 'center',
                             justifyContent: 'flex-start',
-                            zIndex: 105,
-                            paddingTop: '120px', // More space to clear navbar
+                            zIndex: 20000,
+                            paddingTop: '2rem', // Reduced padding as we now cover the navbar
                             pointerEvents: 'none',
                             background: 'rgba(255,255,255,0.98)'
                         }}

@@ -114,14 +114,14 @@ export const Process = () => {
                             left: 0,
                             width: '100%',
                             height: '100%',
-                            zIndex: 2000,
+                            zIndex: 20000,
                             pointerEvents: 'auto',
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'flex-start',
                             background: '#ffffff',
                             padding: '1rem',
-                            paddingTop: '8rem',
+                            paddingTop: '2rem', // Reduced padding as we now cover the navbar
                             overflowY: 'auto'
                         }}
                     >
@@ -200,7 +200,9 @@ export const Process = () => {
                                     borderRadius: '16px',
                                     overflow: 'hidden',
                                     boxShadow: '0 10px 40px rgba(0,0,0,0.1)',
-                                    height: '400px'
+                                    height: 'auto',
+                                    maxHeight: '400px',
+                                    minHeight: '200px'
                                 }}>
                                     <img
                                         src="/images/hero_slide_1.jpg"
@@ -266,7 +268,7 @@ export const Process = () => {
                             alignItems: 'flex-start', // Align to top to prevent clipping
                             background: '#ffffff',
                             padding: '1rem',
-                            paddingTop: '8rem', // Increased top padding to clear the navbar
+                            paddingTop: '2rem', // Reduced padding as we now cover the navbar
                             overflowY: 'auto' // Allow container to scroll
                         }}
                     >
