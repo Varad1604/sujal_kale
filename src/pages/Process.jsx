@@ -250,7 +250,7 @@ export const Process = () => {
                                     </li>
                                     <li style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', color: 'var(--color-text-muted)', fontSize: '1.1rem' }}>
                                         <span style={{ color: 'var(--color-primary)', fontSize: '1.5rem' }}>•</span>
-                                        <span>A unique 13 tank procedure that can be customized according to customer's requirements.</span>
+                                        <span>A unique in-house procedure that can be customized according to customer's requirements.</span>
                                     </li>
                                     <li style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', color: 'var(--color-text-muted)', fontSize: '1.1rem' }}>
                                         <span style={{ color: 'var(--color-primary)', fontSize: '1.5rem' }}>•</span>
