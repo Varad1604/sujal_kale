@@ -213,10 +213,10 @@ export const Home = () => {
                         <div>
 
                             <h3 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: 'var(--color-primary)', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700' }}>Welcome to Sujal Industries</h3>
-                            <p style={{ marginBottom: '1.5rem' }}>
+                            <p style={{ marginBottom: '1.5rem', fontSize: '1.25rem' }}>
                                 We stand as the leading manufacturer of wire on tube condensers, playing a pivotal role in providing cutting-edge Wire on Tube Condensers to our esteemed clients. Our production process incorporates the latest mechanisms and advanced technologies.
                             </p>
-                            <p>
+                            <p style={{ fontSize: '1.25rem' }}>
                                 Distinguished from traditional condensers in the market, our offered range boasts numerous advantages. With an emphasis on excellent quality and application-specific design, our condensers feature a large surface area, ensuring high efficiency. Furthermore, their compact body enhances practicality.
                             </p>
                         </div>
