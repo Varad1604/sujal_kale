@@ -87,7 +87,7 @@ export const OurLab = () => {
                         </div>
                         <div style={{ padding: '2rem' }}>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--color-primary)' }}>Precision Measurement & Inspection Instruments</h3>
-                            <p style={{ color: 'var(--color-text-muted)' }}>Verifying the mechanical strength and elasticity of components to ensure robust performance.</p>
+                            <p style={{ color: 'var(--color-text-muted)' }}>High-end equipments to ensure 100 percent quality</p>
                         </div>
                     </div>
 
