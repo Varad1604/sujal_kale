@@ -31,7 +31,7 @@ const Counter = ({ value, duration = 2 }) => {
 export const Home = () => {
     const [currentSlide, setCurrentSlide] = useState(0)
     const marqueeRef = useRef(null)
-    const isMarqueeInView = useInView(marqueeRef, { once: true, margin: "-50px" })
+    const isMarqueeInView = useInView(marqueeRef, { margin: "-50px" })
 
     const slides = [
         { type: 'image', src: '/images/carousel_1.jpg' },

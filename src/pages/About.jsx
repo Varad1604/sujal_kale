@@ -165,7 +165,7 @@ export const About = () => {
                     >
                         <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--color-secondary)' }}>Our Mission</h3>
                         <p>
-                            We merge youthful creativity with advanced technology to surpass both explicit and implicit customer expectations, ensuring excellence in our products and services.
+                            We aim to lead the CED coating industry by serving major automobile brands, set benchmarks in WOT condenser manufacturing for deep freezers in India, and expand our capabilities beyond regional boundaries to build a globally recognized industrial enterprise
                         </p>
                     </motion.div>
                 </div>
