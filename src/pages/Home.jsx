@@ -30,6 +30,8 @@ const Counter = ({ value, duration = 2 }) => {
 
 export const Home = () => {
     const [currentSlide, setCurrentSlide] = useState(0)
+    const marqueeRef = useRef(null)
+    const isMarqueeInView = useInView(marqueeRef, { once: true, margin: "-50px" })
 
     const slides = [
         { type: 'image', src: '/images/carousel_1.jpg' },
@@ -284,10 +286,10 @@ export const Home = () => {
                         }}>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '2rem', color: 'var(--color-secondary)' }}>Trusted by Industry Leaders</h3>
 
-                            <div style={{ display: 'flex', overflow: 'hidden', maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}>
+                            <div ref={marqueeRef} style={{ display: 'flex', overflow: 'hidden', maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}>
                                 <motion.div
                                     style={{ display: 'flex', gap: '4rem', whiteSpace: 'nowrap' }}
-                                    animate={{ x: ['0%', '-50%'] }}
+                                    animate={isMarqueeInView ? { x: ['0%', '-50%'] } : { x: '0%' }}
                                     transition={{ repeat: Infinity, ease: 'linear', duration: 50 }}
                                 >
                                     {[
