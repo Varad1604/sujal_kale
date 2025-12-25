@@ -56,7 +56,7 @@ export const AutomobileCED = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            style={{ padding: '4rem 10%', color: 'var(--color-text)', position: 'relative', minHeight: '100vh', pointerEvents: 'none' }}
+            style={{ padding: '4rem 10%', color: 'var(--color-text)', position: 'relative', minHeight: '100vh', pointerEvents: 'auto' }}
         >
             {(!selectedProduct || selectedProduct.hasSimulation) && (
                 <Link to="/products" style={{

@@ -114,7 +114,7 @@ export const Process = () => {
                             left: 0,
                             width: '100%',
                             height: '100%',
-                            zIndex: 20,
+                            zIndex: 2000,
                             pointerEvents: 'auto',
                             display: 'flex',
                             justifyContent: 'center',
@@ -259,7 +259,7 @@ export const Process = () => {
                             left: 0,
                             width: '100%',
                             height: '100%',
-                            zIndex: 20,
+                            zIndex: 2000,
                             pointerEvents: 'auto', // Enable scrolling on the overlay
                             display: 'flex',
                             justifyContent: 'center',
