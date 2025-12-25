@@ -152,7 +152,7 @@ export const About = () => {
                     >
                         <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--color-secondary)' }}>Our Vision</h3>
                         <p>
-                            To redefine the manufacturing landscape by proving that industrial precision and social responsibility go hand in hand. We aim to be the preferred global partner for brands that value quality as much as they value integrity.
+                            To become a globally trusted manufacturing partner, delivering precision-engineered solutions through strong processes, uncompromising quality, and responsible practices.
                         </p>
                     </motion.div>
 
