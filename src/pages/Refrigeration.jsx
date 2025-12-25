@@ -9,9 +9,9 @@ useGLTF.preload('/models/Ced Coated 9-draco.glb')
 useGLTF.preload('/models/Ced Coated 2-draco.glb')
 
 const products = [
-    { id: 'condenser', name: '5 row condenser', image: '/images/5_row_condenser-removebg.png' },
-    { id: 'domestic-condenser', name: '2 row condenser', image: '/images/2_row_condenser-removebg-preview.png' },
-    { id: '1-6-row-condenser', name: '1 to 6 Row Condenser', image: '/images/1_to_6_row_condesner-removebg.png', isStatic: true },
+    { id: 'condenser', name: '5 Row (WOT) Condenser', image: '/images/5_row_condenser-removebg.png' },
+    { id: 'domestic-condenser', name: '2 Row (WOT) Condenser', image: '/images/2_row_condenser-removebg-preview.png' },
+    { id: '1-6-row-condenser', name: '1 to 6 Row (WOT) Condenser', image: '/images/1_to_6_row_condesner-removebg.png', isStatic: true },
 ]
 
 export const Refrigeration = () => {
