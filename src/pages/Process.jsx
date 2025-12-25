@@ -111,7 +111,7 @@ export const Process = () => {
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'flex-start',
-                        background: 'rgba(255, 255, 255, 0.95)', // Slightly translucent to see if it's there
+                        background: '#ffffff', // Solid white to hide background content as requested
                         padding: '1rem',
                         paddingTop: '2rem',
                         overflowY: 'auto'
