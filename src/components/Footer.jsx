@@ -36,7 +36,7 @@ export const Footer = () => {
                         <a href="#" style={{ color: 'var(--color-text)', fontSize: '1.4rem', transition: 'color 0.3s' }} onMouseOver={(e) => e.currentTarget.style.color = '#FF0000'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--color-text)'}>
                             <FaYoutube />
                         </a>
-                        <a href="#" style={{ color: 'var(--color-text)', fontSize: '1.4rem', transition: 'color 0.3s' }} onMouseOver={(e) => e.currentTarget.style.color = '#E1306C'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--color-text)'}>
+                        <a href="https://www.instagram.com/sujalindustries?igsh=M3EzaWlnMmdyd3B4&utm_source=qr" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-text)', fontSize: '1.4rem', transition: 'color 0.3s' }} onMouseOver={(e) => e.currentTarget.style.color = '#E1306C'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--color-text)'}>
                             <FaInstagram />
                         </a>
                         <a href="#" style={{ color: 'var(--color-text)', fontSize: '1.4rem', transition: 'color 0.3s' }} onMouseOver={(e) => e.currentTarget.style.color = '#0077B5'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--color-text)'}>
