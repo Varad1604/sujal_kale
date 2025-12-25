@@ -334,12 +334,13 @@ export const Layout = () => {
                 id="main-content"
                 style={{
                     position: 'relative',
-                    zIndex: 1,
-                    minHeight: '100vh', // Ensure it covers screen
+                    // Using default stacking context (auto) so children with fixed positioning can compete with header
+                    flex: '1',
                     display: 'flex',
-                    flexDirection: 'column'
-                }}>
-                {location.pathname !== '/' && <div className="header-spacer" style={{ height: '140px' }} />} {/* Spacer for fixed header, hidden on Home */}
+                    flexDirection: 'column',
+                    overflow: 'visible' // Ensure sticky/fixed elements work inside
+                }}
+            >    {location.pathname !== '/' && <div className="header-spacer" style={{ height: '140px' }} />} {/* Spacer for fixed header, hidden on Home */}
                 <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
                     <div style={{ flex: 1 }}>
                         <Outlet />
