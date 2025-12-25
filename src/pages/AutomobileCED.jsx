@@ -8,11 +8,11 @@ import { useGLTF } from '@react-three/drei'
 useGLTF.preload('/models/spring-draco.glb')
 
 const products = [
-    { id: 'spring', name: 'Industrial Spring', image: '/images/spring.png', hasSimulation: true },
+    { id: 'spring', name: 'Vehicle Suspensions', image: '/images/spring.png', hasSimulation: true },
     { id: 'suspension_covers', name: 'Suspension Covers', image: '/images/heat_sink-removebg.png', hasSimulation: false },
-    { id: 'solar_ext', name: 'Solar Extension Suspension', image: '/images/Solar_Extension_Suspension-removebg.png', hasSimulation: false },
+    { id: 'solar_ext', name: 'Extending Suspensions', image: '/images/Solar_Extension_Suspension-removebg.png', hasSimulation: false },
     { id: 'steering_yoke', name: 'Steering Lower Yoke Assembly', image: '/images/Streeing_Lower_Yoke_assembly_-removebg.png', hasSimulation: false },
-    { id: 'small_auto', name: 'Small Automobile Parts', image: '/images/Small_automobile_parts_-removebg.png', hasSimulation: false },
+    { id: 'small_auto', name: 'Two wheeler side stand assembly', image: '/images/Small_automobile_parts_-removebg.png', hasSimulation: false },
     { id: 'heavy_susp', name: 'Heavy Duty Vehicle Suspension', image: '/images/Heavy_Duty_Suspensions-removebg.png', hasSimulation: false },
     { id: 'susp_2_3', name: '2&3 Wheeler Suspensions', image: '/images/TWO_Wheeler_Suspensions-removebg.png', hasSimulation: false },
 ]
@@ -45,7 +45,7 @@ export const AutomobileCED = () => {
 
     // Gallery images mapping
     const galleryImages = {
-        'Solar Extension Suspension': [
+        'Extending Suspensions': [
             '/images/Solar Extension Suspension.jpeg',
             '/images/Solar Expansion Suspension.jpeg'
         ]

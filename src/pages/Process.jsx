@@ -228,19 +228,19 @@ export const Process = () => {
                                     }}>
                                         <li style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', color: 'var(--color-text-muted)', fontSize: '1.1rem' }}>
                                             <span style={{ color: 'var(--color-primary)', fontSize: '1.5rem' }}>•</span>
-                                            <span>Superior corrosion resistance with uniform coating thickness across complex geometries.</span>
+                                            <span>Fully automated SCADA and PLC controlled CED line.</span>
                                         </li>
                                         <li style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', color: 'var(--color-text-muted)', fontSize: '1.1rem' }}>
                                             <span style={{ color: 'var(--color-primary)', fontSize: '1.5rem' }}>•</span>
-                                            <span>Eco-friendly water-based process with high transfer efficiency and minimal waste.</span>
+                                            <span>A unique 13 tank procedure that can be customized according to customer's requirements.</span>
                                         </li>
                                         <li style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', color: 'var(--color-text-muted)', fontSize: '1.1rem' }}>
                                             <span style={{ color: 'var(--color-primary)', fontSize: '1.5rem' }}>•</span>
-                                            <span>Automated dipping process ensures complete coverage of internal cavities and edges.</span>
+                                            <span>Two automated transformers: zero Human intervention; delivering highest precision.</span>
                                         </li>
                                         <li style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', color: 'var(--color-text-muted)', fontSize: '1.1rem' }}>
                                             <span style={{ color: 'var(--color-primary)', fontSize: '1.5rem' }}>•</span>
-                                            <span>Consistent finish suitable for automotive and high-performance industrial applications.</span>
+                                            <span>State of the art laboratory: With inhouse SST (Salt Spray Testing) and humidity chamber.</span>
                                         </li>
                                     </ul>
                                 </div>
