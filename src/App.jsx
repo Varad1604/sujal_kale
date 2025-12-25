@@ -3,6 +3,7 @@ import { lazy, Suspense } from 'react'
 import { Layout } from './components/Layout'
 import { Home } from './pages/Home'
 import { ScrollToTop } from './components/ScrollToTop'
+import { WhatsAppButton } from './components/WhatsAppButton'
 import { useGLTF } from '@react-three/drei'
 
 // Preload ALL 3D models at app startup for instant rendering later
@@ -48,6 +49,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <WhatsAppButton />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

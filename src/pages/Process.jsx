@@ -1,9 +1,19 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
 export const Process = () => {
     const [activeProcess, setActiveProcess] = useState(null)
+
+    // Lock body scroll when overlay is active
+    useEffect(() => {
+        if (activeProcess) {
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = 'unset'
+        }
+        return () => { document.body.style.overflow = 'unset' }
+    }, [activeProcess])
 
     return (
         <motion.div
@@ -50,7 +60,8 @@ export const Process = () => {
                                     display: 'flex',
                                     flexDirection: 'column',
                                     alignItems: 'center',
-                                    gap: '1rem'
+                                    gap: '1rem',
+                                    height: '100%' // Ensure full height for alignment
                                 }}
                                 onClick={() => setActiveProcess('CED Coating')}
                                 onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
@@ -59,7 +70,7 @@ export const Process = () => {
                                 <div style={{ fontSize: '4rem', fontWeight: 'bold', color: 'var(--color-secondary)', opacity: 0.5 }}>01</div>
                                 <h3 style={{ fontSize: '1.8rem', marginBottom: '0.5rem' }}>CED Coating</h3>
                                 <p>Cathodic Electro-Deposition provides a uniform, corrosion-resistant base coat, reaching even the most complex recesses.</p>
-                                <p style={{ fontSize: '0.9rem', color: 'var(--color-primary)', marginTop: '0.5rem', fontWeight: 'bold' }}>
+                                <p style={{ fontSize: '0.9rem', color: 'var(--color-primary)', marginTop: 'auto', fontWeight: 'bold' }}>
                                     View 3D Simulation
                                 </p>
                             </div>
@@ -74,7 +85,8 @@ export const Process = () => {
                                     display: 'flex',
                                     flexDirection: 'column',
                                     alignItems: 'center',
-                                    gap: '1rem'
+                                    gap: '1rem',
+                                    height: '100%' // Ensure full height for alignment
                                 }}
                                 onClick={() => setActiveProcess('Condenser Manufacturing')}
                                 onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
@@ -83,7 +95,7 @@ export const Process = () => {
                                 <div style={{ fontSize: '4rem', fontWeight: 'bold', color: 'var(--color-secondary)', opacity: 0.5 }}>02</div>
                                 <h3 style={{ fontSize: '1.8rem', marginBottom: '0.5rem' }}>Condenser Manufacturing</h3>
                                 <p>Precision engineering of 1-6 row WTO condensers using advanced mechanisms ensuring high efficiency.</p>
-                                <p style={{ fontSize: '0.9rem', color: 'var(--color-primary)', marginTop: '0.5rem', fontWeight: 'bold' }}>
+                                <p style={{ fontSize: '0.9rem', color: 'var(--color-primary)', marginTop: 'auto', fontWeight: 'bold' }}>
                                     View Process Details
                                 </p>
                             </div>
@@ -107,65 +119,131 @@ export const Process = () => {
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'flex-start',
-                            background: 'rgba(255,255,255,0.95)',
+                            background: '#ffffff',
                             padding: '1rem',
-                            paddingTop: '8rem'
+                            paddingTop: '8rem',
+                            overflowY: 'auto'
                         }}
                     >
-                        <div className="glass-panel" style={{
-                            padding: '3rem',
-                            maxWidth: '900px',
-                            width: '100%',
-                            margin: '2rem auto', // Center vertically if space allows, adding margin for scroll
-                            position: 'relative',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                            boxShadow: '0 20px 50px rgba(0,0,0,0.1)',
-                            borderRadius: '16px'
-                        }}>
-                            <button
-                                onClick={() => setActiveProcess(null)}
-                                style={{
-                                    position: 'absolute',
-                                    top: '1rem',
-                                    right: '1rem',
-                                    background: 'none',
-                                    border: 'none',
-                                    fontSize: '1.5rem',
-                                    cursor: 'pointer',
-                                    color: 'var(--color-text)'
-                                }}
-                            >
-                                ✕
-                            </button>
-
-                            <h2 style={{
-                                fontSize: '3rem',
-                                color: 'var(--color-secondary)',
-                                marginBottom: '0.5rem'
-                            }}>
-                                CED Coating
-                            </h2>
-                            <p style={{
-                                fontSize: '1.1rem',
-                                marginBottom: '2rem',
-                                color: 'var(--color-text-muted)',
-                                lineHeight: '1.4',
-                                textAlign: 'center',
-                                maxWidth: '600px'
-                            }}>
-                                High-fidelity simulation of the manufacturing process. Observing precision engineering and coating application.
-                            </p>
-
-                            <div style={{
+                        <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem' }}>
+                            {/* Section 1: Simulation */}
+                            <div className="glass-panel" style={{
+                                padding: '3rem',
+                                maxWidth: '900px',
                                 width: '100%',
-                                maxWidth: '800px',
-                                borderRadius: '12px',
-                                overflow: 'hidden',
-                                boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
+                                position: 'relative',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                boxShadow: '0 20px 50px rgba(0,0,0,0.1)',
+                                borderRadius: '16px'
                             }}>
-                                <img src="/models/ced_animation_final.gif" alt="CED Coating Process 3D Visualization" style={{ width: '100%', display: 'block' }} />
+                                <button
+                                    onClick={() => setActiveProcess(null)}
+                                    style={{
+                                        position: 'absolute',
+                                        top: '1rem',
+                                        right: '1rem',
+                                        background: 'none',
+                                        border: 'none',
+                                        fontSize: '1.5rem',
+                                        cursor: 'pointer',
+                                        color: 'var(--color-text)'
+                                    }}
+                                >
+                                    ✕
+                                </button>
+
+                                <h2 style={{
+                                    fontSize: '3rem',
+                                    color: 'var(--color-secondary)',
+                                    marginBottom: '0.5rem'
+                                }}>
+                                    CED Coating
+                                </h2>
+                                <p style={{
+                                    fontSize: '1.1rem',
+                                    marginBottom: '2rem',
+                                    color: 'var(--color-text-muted)',
+                                    lineHeight: '1.4',
+                                    textAlign: 'center',
+                                    maxWidth: '600px'
+                                }}>
+                                    High-fidelity simulation of the manufacturing process. Observing precision engineering and coating application.
+                                </p>
+
+                                <div style={{
+                                    width: '100%',
+                                    maxWidth: '800px',
+                                    borderRadius: '12px',
+                                    overflow: 'hidden',
+                                    boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
+                                }}>
+                                    <img src="/models/ced_animation_final.gif" alt="CED Coating Process 3D Visualization" style={{ width: '100%', display: 'block' }} />
+                                </div>
+                            </div>
+
+                            {/* Section 2: Process Highlights (Bigger) */}
+                            <div className="glass-panel" style={{
+                                padding: '4rem',
+                                maxWidth: '900px', // Reduced width for vertical layout
+                                width: '100%',
+                                boxShadow: '0 20px 50px rgba(0,0,0,0.1)',
+                                borderRadius: '16px',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                gap: '3rem'
+                            }}>
+                                <div style={{
+                                    width: '100%',
+                                    borderRadius: '16px',
+                                    overflow: 'hidden',
+                                    boxShadow: '0 10px 40px rgba(0,0,0,0.1)',
+                                    height: '400px'
+                                }}>
+                                    <img
+                                        src="/images/hero_slide_1.jpg"
+                                        alt="CED Coating Process Detail"
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                    />
+                                </div>
+                                <div style={{ width: '100%' }}>
+                                    <h3 style={{
+                                        fontSize: '2.5rem',
+                                        color: 'var(--color-secondary)',
+                                        marginBottom: '2rem',
+                                        textAlign: 'center'
+                                    }}>
+                                        Process Highlights
+                                    </h3>
+                                    <ul style={{
+                                        listStyle: 'none',
+                                        padding: 0,
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        gap: '1.5rem',
+                                        maxWidth: '800px',
+                                        margin: '0 auto'
+                                    }}>
+                                        <li style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', color: 'var(--color-text-muted)', fontSize: '1.1rem' }}>
+                                            <span style={{ color: 'var(--color-primary)', fontSize: '1.5rem' }}>•</span>
+                                            <span>Superior corrosion resistance with uniform coating thickness across complex geometries.</span>
+                                        </li>
+                                        <li style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', color: 'var(--color-text-muted)', fontSize: '1.1rem' }}>
+                                            <span style={{ color: 'var(--color-primary)', fontSize: '1.5rem' }}>•</span>
+                                            <span>Eco-friendly water-based process with high transfer efficiency and minimal waste.</span>
+                                        </li>
+                                        <li style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', color: 'var(--color-text-muted)', fontSize: '1.1rem' }}>
+                                            <span style={{ color: 'var(--color-primary)', fontSize: '1.5rem' }}>•</span>
+                                            <span>Automated dipping process ensures complete coverage of internal cavities and edges.</span>
+                                        </li>
+                                        <li style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', color: 'var(--color-text-muted)', fontSize: '1.1rem' }}>
+                                            <span style={{ color: 'var(--color-primary)', fontSize: '1.5rem' }}>•</span>
+                                            <span>Consistent finish suitable for automotive and high-performance industrial applications.</span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </motion.div>
@@ -186,7 +264,7 @@ export const Process = () => {
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'flex-start', // Align to top to prevent clipping
-                            background: 'rgba(255,255,255,0.95)',
+                            background: '#ffffff',
                             padding: '1rem',
                             paddingTop: '8rem', // Increased top padding to clear the navbar
                             overflowY: 'auto' // Allow container to scroll
