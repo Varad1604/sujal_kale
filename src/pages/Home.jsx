@@ -64,7 +64,7 @@ export const Home = () => {
             style={{
                 position: 'relative',
                 zIndex: 10,
-                padding: '4rem 2rem',
+                padding: '0 0', // Header spacer handled by Layout.jsx
                 color: 'var(--color-text)',
             }}
         >

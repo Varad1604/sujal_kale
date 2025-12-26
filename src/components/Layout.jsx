@@ -341,7 +341,8 @@ export const Layout = () => {
                     flexDirection: 'column',
                     overflow: 'visible' // Ensure sticky/fixed elements work inside
                 }}
-            >    {location.pathname !== '/' && <div className="header-spacer" style={{ height: '140px' }} />} {/* Spacer for fixed header, hidden on Home */}
+            >
+                <div className="header-spacer" style={{ height: '140px' }} /> {/* Spacer for fixed header */}
                 <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
                     <div style={{ flex: 1 }}>
                         <Outlet />
