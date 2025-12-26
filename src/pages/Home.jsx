@@ -34,6 +34,7 @@ export const Home = () => {
     const isMarqueeInView = useInView(marqueeRef, { margin: "-50px" })
 
     const slides = [
+        { type: 'image', src: '/images/product_gallery.jpeg' },
         { type: 'image', src: '/images/transporter.jpeg' },
         { type: 'image', src: '/images/carousel_1.jpg' },
         { type: 'image', src: '/images/carousel_2.jpg' },
@@ -51,7 +52,7 @@ export const Home = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setCurrentSlide((prev) => (prev + 1) % slides.length)
-        }, 3500)
+        }, 5000)
         return () => clearTimeout(timer)
     }, [currentSlide, slides.length]) // Reset timer on any slide change
 
@@ -90,7 +91,7 @@ export const Home = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        transition={{ duration: 1.0, ease: "easeInOut" }}
+                        transition={{ duration: 2.5, ease: "linear" }}
                         style={{
                             position: 'absolute',
                             top: 0,
