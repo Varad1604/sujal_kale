@@ -173,6 +173,7 @@ export const Layout = () => {
     const [showIntro, setShowIntro] = useState(true)
 
     const { activeProduct } = useStore() // Get activeProduct to detect simulation mode
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
 
     // Products that have 3D simulations (immersive mode)
     const simulationProducts = ['5 Row (WOT) Condenser', '2 Row (WOT) Condenser', 'Vehicle Suspensions']
@@ -234,8 +235,8 @@ export const Layout = () => {
                 left: 0,
                 width: '100%',
                 zIndex: 100,
-                background: 'rgba(255, 255, 255, 0.9)', // White background
-                backdropFilter: 'blur(10px)',
+                background: 'rgba(255, 255, 255, 0.95)', // White background
+                backdropFilter: isMobile ? 'none' : 'blur(10px)',
                 boxShadow: '0 2px 10px rgba(0,0,0,0.05)',
                 pointerEvents: isImmersiveMode ? 'none' : 'auto',
                 opacity: isImmersiveMode ? 0 : 1,

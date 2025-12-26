@@ -35,6 +35,7 @@ const LoadingSpinner = () => (
 
 export const CanvasContainer = ({ visible }) => {
     const containerRef = useRef()
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
 
     return (
         <div
@@ -55,11 +56,18 @@ export const CanvasContainer = ({ visible }) => {
             {/* Loading indicator shown while 3D loads */}
             <Suspense fallback={<LoadingSpinner />}>
                 <Canvas
-                    shadows
+                    shadows={!isMobile} // Disable shadows on mobile for better performance
                     camera={{ position: [0, 0, 5], fov: 30 }}
-                    dpr={[1, 2]}
+                    dpr={isMobile ? [1, 1] : [1, 2]} // Reduce pixel ratio on mobile
                     eventSource={containerRef}
                     eventPrefix="client"
+                    frameloop={visible ? 'always' : 'never'} // CRITICAL: Stop rendering loop when hidden
+                    performance={{ min: 0.5 }}
+                    gl={{
+                        antialias: !isMobile,
+                        powerPreference: "high-performance",
+                        alpha: true
+                    }}
                     style={{ pointerEvents: visible ? 'auto' : 'none' }}
                 >
                     <Experience />

@@ -220,12 +220,8 @@ export const Experience = () => {
         }
     }, [location, activeProduct, setActiveProduct])
 
-    // Determine which scene to show based on route
-    const isHome = location.pathname === '/'
-    const isAbout = location.pathname === '/about'
-    const isProducts = location.pathname === '/products'
-    const isContact = location.pathname === '/contact'
-    const isProcess = location.pathname === '/process'
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
+    const showSimulation = activeProduct && (location.pathname === '/products/automobile-ced' || location.pathname === '/products/refrigeration')
 
     return (
         <>
@@ -251,29 +247,28 @@ export const Experience = () => {
                 }}
             />
 
-            <ambientLight intensity={0.5} />
-            <spotLight
-                position={[10, 10, 10]}
-                angle={0.15}
-                penumbra={1}
-                intensity={1}
-                castShadow
-                shadow-mapSize={[1024, 1024]}
-            />
-            <pointLight position={[-10, -10, -10]} intensity={1} color="#00f0ff" />
-
-            {/* Warehouse environment for better metal reflections */}
-            <Environment preset="warehouse" />
-
-            {activeProduct && (location.pathname === '/products/automobile-ced' || location.pathname === '/products/refrigeration') && (
-                <DetailedProductScene product={activeProduct} />
+            {showSimulation && (
+                <>
+                    <ambientLight intensity={0.5} />
+                    <spotLight
+                        position={[10, 10, 10]}
+                        angle={0.15}
+                        penumbra={1}
+                        intensity={1}
+                        castShadow={!isMobile}
+                        shadow-mapSize={isMobile ? [256, 256] : [1024, 1024]}
+                    />
+                    <pointLight position={[-10, -10, -10]} intensity={1} color="#00f0ff" />
+                    <Environment preset="warehouse" />
+                    <DetailedProductScene product={activeProduct} />
+                </>
             )}
 
-            <EffectComposer disableNormalPass multisampling={0}>
-                <Bloom luminanceThreshold={1} intensity={1.5} radius={0.4} />
-                {/* Vignette removed for clean background */}
-                {/* <Vignette eskil={false} offset={0.1} darkness={1.1} /> */}
-            </EffectComposer>
+            {!isMobile && showSimulation && (
+                <EffectComposer disableNormalPass multisampling={0}>
+                    <Bloom luminanceThreshold={1} intensity={1.5} radius={0.4} />
+                </EffectComposer>
+            )}
         </>
     )
 }
