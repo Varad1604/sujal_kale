@@ -255,8 +255,8 @@ export const Experience = () => {
                         angle={0.15}
                         penumbra={1}
                         intensity={1}
-                        castShadow={!isMobile}
-                        shadow-mapSize={isMobile ? [256, 256] : [1024, 1024]}
+                        castShadow={true}
+                        shadow-mapSize={isMobile ? [512, 512] : [1024, 1024]}
                     />
                     <pointLight position={[-10, -10, -10]} intensity={1} color="#00f0ff" />
                     <Environment preset="warehouse" />
@@ -264,9 +264,14 @@ export const Experience = () => {
                 </>
             )}
 
-            {!isMobile && showSimulation && (
+            {showSimulation && (
                 <EffectComposer disableNormalPass multisampling={0}>
-                    <Bloom luminanceThreshold={1} intensity={1.5} radius={0.4} />
+                    <Bloom
+                        luminanceThreshold={1}
+                        intensity={isMobile ? 0.8 : 1.5}
+                        radius={0.4}
+                        mipmapBlur={isMobile} // Better quality blur for mobile
+                    />
                 </EffectComposer>
             )}
         </>
