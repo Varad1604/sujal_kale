@@ -138,7 +138,7 @@ export const AutomobileCED = () => {
                             left: 0,
                             width: '100%',
                             height: '100%',
-                            zIndex: 20000,
+                            zIndex: 15,
                             pointerEvents: 'none', // Allow clicking through to canvas if needed, BUT simulation usually needs interaction
                             display: 'flex',
                             flexDirection: 'column',
