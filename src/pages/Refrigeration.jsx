@@ -46,17 +46,19 @@ export const Refrigeration = () => {
             exit={{ opacity: 0 }}
             style={{ padding: '4rem 10%', color: 'var(--color-text)', pointerEvents: 'none' }}
         >
-            <Link to="/products" style={{
-                display: 'inline-block',
-                marginBottom: '2rem',
-                color: 'var(--color-primary)',
-                textDecoration: 'none',
-                fontSize: '1.1rem',
-                fontWeight: 'bold',
-                pointerEvents: 'auto'
-            }}>
-                ← Back to Products
-            </Link>
+            {!activeProduct && (
+                <Link to="/products" style={{
+                    display: 'inline-block',
+                    marginBottom: '2rem',
+                    color: 'var(--color-primary)',
+                    textDecoration: 'none',
+                    fontSize: '1.1rem',
+                    fontWeight: 'bold',
+                    pointerEvents: 'auto'
+                }}>
+                    ← Back to Products
+                </Link>
+            )}
 
             <AnimatePresence>
                 {!activeProduct ? (
