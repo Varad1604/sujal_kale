@@ -175,7 +175,7 @@ export const Layout = () => {
     const { activeProduct } = useStore() // Get activeProduct to detect simulation mode
 
     // Products that have 3D simulations (immersive mode)
-    const simulationProducts = ['5 row condenser', 'Industrial Spring', '2 row condenser']
+    const simulationProducts = ['5 Row (WOT) Condenser', '2 Row (WOT) Condenser', 'Vehicle Suspensions']
     const isImmersiveMode = activeProduct && simulationProducts.includes(activeProduct)
 
     // Intro Timing Logic

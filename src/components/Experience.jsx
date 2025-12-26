@@ -158,21 +158,21 @@ const DetailedProductScene = ({ product }) => {
     })
 
     // Render specific simulation based on product name
-    if (product === '5 row condenser') return (
+    if (product === '5 Row (WOT) Condenser') return (
         <Center top>
             <group>
                 <CondenserModel modelPath="/models/Ced Coated 9-draco.glb" scale={0.012} />
             </group>
         </Center>
     )
-    if (product === 'Industrial Spring') return (
+    if (product === 'Vehicle Suspensions') return (
         <Center top>
             <group position={[1.5, 0, 0]}>
                 <SpringModel scale={0.025} />
             </group>
         </Center>
     )
-    if (product === 'Domestic Condenser' || product === '2 row condenser') return (
+    if (product === 'Domestic Condenser' || product === '2 Row (WOT) Condenser') return (
         <Center top>
             <group>
                 <CondenserModel modelPath="/models/Ced Coated 2-draco.glb" scale={0.015} />
@@ -231,7 +231,7 @@ export const Experience = () => {
         <>
             <PerspectiveCamera makeDefault position={[0, 0, 10]} />
             <OrbitControls
-                enabled={!!activeProduct && ['5 row condenser', 'Industrial Spring', '2 row condenser'].includes(activeProduct)}
+                enabled={!!activeProduct && ['5 Row (WOT) Condenser', 'Vehicle Suspensions', '2 Row (WOT) Condenser'].includes(activeProduct)}
                 enableZoom={true}
                 enablePan={true} // Enable pan for full control
                 enableRotate={true}
