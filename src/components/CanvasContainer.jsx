@@ -1,6 +1,6 @@
 import { Canvas } from '@react-three/fiber'
 import { Experience } from './Experience'
-import { Suspense } from 'react'
+import { useRef, Suspense } from 'react'
 
 // Loading spinner component for 3D models
 const LoadingSpinner = () => (
@@ -33,26 +33,34 @@ const LoadingSpinner = () => (
     </div>
 )
 
-export const CanvasContainer = () => {
+export const CanvasContainer = ({ visible }) => {
+    const containerRef = useRef()
+
     return (
-        <div style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            zIndex: 0,
-            pointerEvents: 'none'
-        }}>
+        <div
+            ref={containerRef}
+            style={{
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                zIndex: visible ? 10 : 0,
+                pointerEvents: visible ? 'auto' : 'none',
+                opacity: visible ? 1 : 0,
+                visibility: visible ? 'visible' : 'hidden',
+                transition: 'opacity 0.5s ease, visibility 0.5s'
+            }}
+        >
             {/* Loading indicator shown while 3D loads */}
             <Suspense fallback={<LoadingSpinner />}>
                 <Canvas
                     shadows
                     camera={{ position: [0, 0, 5], fov: 30 }}
                     dpr={[1, 2]}
-                    eventSource={document.getElementById('main-content') || document.body}
+                    eventSource={containerRef}
                     eventPrefix="client"
-                    style={{ pointerEvents: 'auto' }}
+                    style={{ pointerEvents: visible ? 'auto' : 'none' }}
                 >
                     <Experience />
                 </Canvas>

@@ -161,21 +161,21 @@ const DetailedProductScene = ({ product }) => {
     if (product === '5 row condenser') return (
         <Center top>
             <group>
-                <CondenserModel modelPath="/models/Ced Coated 9-draco.glb" scale={0.01} />
+                <CondenserModel modelPath="/models/Ced Coated 9-draco.glb" scale={0.012} />
             </group>
         </Center>
     )
     if (product === 'Industrial Spring') return (
         <Center top>
-            <group position={[1.5, 0, 0]}> {/* Offset to center - Spring GLB origin is off-center */}
-                <SpringModel scale={0.02} />
+            <group position={[1.5, 0, 0]}>
+                <SpringModel scale={0.025} />
             </group>
         </Center>
     )
     if (product === 'Domestic Condenser' || product === '2 row condenser') return (
         <Center top>
             <group>
-                <CondenserModel modelPath="/models/Ced Coated 2-draco.glb" scale={0.01} />
+                <CondenserModel modelPath="/models/Ced Coated 2-draco.glb" scale={0.015} />
             </group>
         </Center>
     )

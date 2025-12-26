@@ -220,8 +220,8 @@ export const Layout = () => {
                 {showIntro && <SonyIntro key="sony-intro" />}
             </AnimatePresence>
 
-            {/* 3D Background - ONLY when 3D simulation is actively being viewed */}
-            {isImmersiveMode && <CanvasContainer />}
+            {/* 3D Background - Always mounted for context persistence, visibility controlled via prop */}
+            <CanvasContainer visible={isImmersiveMode} />
 
             {/* Navigation Bar - Hidden during immersive simulation mode */}
             <header style={{
