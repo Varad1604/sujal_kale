@@ -231,7 +231,7 @@ export const Process = () => {
                                 minHeight: '200px'
                             }}>
                                 <img
-                                    src="/images/hero_slide_1.jpg"
+                                    src="/images/transporter.jpeg"
                                     alt="CED Coating Process Detail"
                                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                 />

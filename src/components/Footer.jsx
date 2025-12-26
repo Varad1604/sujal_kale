@@ -33,7 +33,7 @@ export const Footer = () => {
                         SUJAL <span className="text-gold">INDUSTRIES</span>
                     </h3>
                     <div style={{ display: 'flex', gap: '1rem' }}>
-                        <a href="#" style={{ color: 'var(--color-text)', fontSize: '1.4rem', transition: 'color 0.3s' }} onMouseOver={(e) => e.currentTarget.style.color = '#FF0000'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--color-text)'}>
+                        <a href="https://youtube.com/@sujalindustries?si=Yjiw8EH6IgU6V6Fg" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-text)', fontSize: '1.4rem', transition: 'color 0.3s' }} onMouseOver={(e) => e.currentTarget.style.color = '#FF0000'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--color-text)'}>
                             <FaYoutube />
                         </a>
                         <a href="https://www.instagram.com/sujalindustries?igsh=M3EzaWlnMmdyd3B4&utm_source=qr" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-text)', fontSize: '1.4rem', transition: 'color 0.3s' }} onMouseOver={(e) => e.currentTarget.style.color = '#E1306C'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--color-text)'}>

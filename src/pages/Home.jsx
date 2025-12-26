@@ -34,6 +34,7 @@ export const Home = () => {
     const isMarqueeInView = useInView(marqueeRef, { margin: "-50px" })
 
     const slides = [
+        { type: 'image', src: '/images/transporter.jpeg' },
         { type: 'image', src: '/images/carousel_1.jpg' },
         { type: 'image', src: '/images/carousel_2.jpg' },
         { type: 'image', src: '/images/carousel_3.jpg' },

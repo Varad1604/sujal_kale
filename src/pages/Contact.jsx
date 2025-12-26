@@ -149,7 +149,7 @@ export const Contact = () => {
                             <div>
                                 <strong style={{ color: 'var(--color-text-muted)', display: 'block', marginBottom: '0.5rem' }}>Follow Us</strong>
                                 <div style={{ display: 'flex', gap: '1rem' }}>
-                                    <a href="#" style={{ color: 'var(--color-text)', fontSize: '1.5rem', transition: 'color 0.3s' }} onMouseOver={(e) => e.currentTarget.style.color = '#FF0000'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--color-text)'}>
+                                    <a href="https://youtube.com/@sujalindustries?si=Yjiw8EH6IgU6V6Fg" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-text)', fontSize: '1.5rem', transition: 'color 0.3s' }} onMouseOver={(e) => e.currentTarget.style.color = '#FF0000'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--color-text)'}>
                                         <FaYoutube />
                                     </a>
                                     <a href="https://www.instagram.com/sujalindustries?igsh=M3EzaWlnMmdyd3B4&utm_source=qr" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-text)', fontSize: '1.5rem', transition: 'color 0.3s' }} onMouseOver={(e) => e.currentTarget.style.color = '#E1306C'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--color-text)'}>
