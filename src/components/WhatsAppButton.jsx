@@ -1,6 +1,8 @@
 import { FaWhatsapp } from 'react-icons/fa'
 
 export const WhatsAppButton = () => {
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
+
     return (
         <a
             href="https://wa.me/919011047273"
@@ -8,11 +10,11 @@ export const WhatsAppButton = () => {
             rel="noopener noreferrer"
             style={{
                 position: 'fixed',
-                bottom: '2rem',
-                right: '2rem',
+                bottom: isMobile ? '1rem' : '2rem',
+                right: isMobile ? '1rem' : '2rem',
                 backgroundColor: 'var(--color-primary)', // Theme color (Burning Flame / Gold)
                 color: '#000', // Black text for better contrast on light orange
-                padding: '0.8rem 1.5rem',
+                padding: isMobile ? '0.6rem 1.2rem' : '0.8rem 1.5rem',
                 borderRadius: '50px', // Pill shape
                 display: 'flex',
                 alignItems: 'center',
