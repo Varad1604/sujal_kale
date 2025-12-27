@@ -36,6 +36,7 @@ export const Home = () => {
     const slides = [
         { type: 'image', src: '/images/product_gallery.jpeg' },
         { type: 'image', src: '/images/transporter.jpeg' },
+        { type: 'image', src: '/images/carousel_11.jpg' },
         { type: 'image', src: '/images/carousel_1.jpg' },
         { type: 'image', src: '/images/carousel_2.jpg' },
         { type: 'image', src: '/images/carousel_3.jpg' },
@@ -45,8 +46,7 @@ export const Home = () => {
         { type: 'image', src: '/images/carousel_7.jpg' },
         { type: 'image', src: '/images/carousel_8.jpg' },
         { type: 'image', src: '/images/carousel_9.jpg' },
-        { type: 'image', src: '/images/carousel_10.jpg' },
-        { type: 'image', src: '/images/carousel_11.jpg' }
+        { type: 'image', src: '/images/carousel_10.jpg' }
     ]
 
     useEffect(() => {
