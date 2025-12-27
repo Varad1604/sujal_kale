@@ -55,14 +55,20 @@ export const OurFacility = () => {
                     gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
                     gap: '1.5rem'
                 }}>
-                    {[1, 2, 3, 4, 5, 6].map((item) => (
-                        <div key={item} className="glass-panel" style={{ padding: '0.5rem', transition: 'transform 0.3s', cursor: 'pointer' }}
+                    {[
+                        { src: "/images/lab_chemical.jpg", alt: "Chemical Testing & Analysis" },
+                        { src: "/images/lab_oven.jpg", alt: "Thermal Testing Oven" },
+                        { src: "/images/lab_precision.png", alt: "Precision Measurement Instruments" },
+                        { src: "/images/lab_saltspray.jpg", alt: "Salt Spray Testing" },
+                        { src: "/images/transporter.jpeg", alt: "Material Transporter" }
+                    ].map((image, index) => (
+                        <div key={index} className="glass-panel" style={{ padding: '0.5rem', transition: 'transform 0.3s', cursor: 'pointer' }}
                             onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
                             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
                         >
                             <img
-                                src={`https://placehold.co/600x400/transparent/white?text=Facility+Image+${item}`}
-                                alt={`Facility ${item}`}
+                                src={image.src}
+                                alt={image.alt}
                                 style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }}
                             />
                         </div>
