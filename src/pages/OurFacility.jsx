@@ -44,7 +44,7 @@ export const OurFacility = () => {
                                 objectFit: 'cover'
                             }}
                         >
-                            <source src="/video/company%20profile.mp4" type="video/mp4" />
+                            <source src="/video/company%20profile-2.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                     </div>
