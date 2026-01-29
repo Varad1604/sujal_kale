@@ -28,25 +28,21 @@ export const OurFacility = () => {
                 <div className="glass-panel" style={{ padding: '1rem', overflow: 'hidden' }}>
                     <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, background: 'black', borderRadius: '8px' }}>
                         {/* Placeholder for Video - Replace iframe src with actual video */}
-                        <video
-                            controls
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                            style={{
-                                position: 'absolute',
-                                top: 0,
-                                left: 0,
-                                width: '100%',
-                                height: '100%',
-                                borderRadius: '8px',
-                                objectFit: 'cover'
-                            }}
-                        >
-                            <source src="/video/company%20profile-2.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
+                        <div style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            width: '100%',
+                            height: '100%',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            flexDirection: 'column',
+                            color: 'rgba(255,255,255,0.5)'
+                        }}>
+                            <FaPlay size={50} style={{ marginBottom: '1rem' }} />
+                            <span>Corporate Video / Factory Tour</span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -77,6 +73,46 @@ export const OurFacility = () => {
                             />
                         </div>
                     ))}
+                </div>
+            </section>
+
+            {/* Company Profile Video */}
+            <section style={{ marginBottom: '5rem' }}>
+                <h2 style={{ fontSize: '2rem', marginBottom: '2rem', color: 'var(--color-secondary)' }}>Company Profile</h2>
+                <div className="glass-panel" style={{ padding: '1.5rem' }}>
+                    <video
+                        controls
+                        style={{
+                            width: '100%',
+                            maxHeight: '500px',
+                            borderRadius: '8px',
+                            background: 'black'
+                        }}
+                    >
+                        <source src="/video/company%20profile-2.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    <div style={{ marginTop: '1rem', display: 'flex', justifyContent: 'flex-end' }}>
+                        <a
+                            href="/video/company%20profile-2.mp4"
+                            download="Sujal-Industries-Company-Profile.mp4"
+                            className="glass-panel"
+                            style={{
+                                padding: '0.75rem 1.5rem',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '0.5rem',
+                                textDecoration: 'none',
+                                color: 'var(--color-text)',
+                                transition: 'background 0.3s'
+                            }}
+                            onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.1)'}
+                            onMouseLeave={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.05)'}
+                        >
+                            <FaDownload />
+                            <span>Download Video</span>
+                        </a>
+                    </div>
                 </div>
             </section>
 
