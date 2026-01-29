@@ -76,52 +76,49 @@ export const OurFacility = () => {
                 </div>
             </section>
 
-            {/* Company Profile Video */}
-            <section style={{ marginBottom: '5rem' }}>
-                <h2 style={{ fontSize: '2rem', marginBottom: '2rem', color: 'var(--color-secondary)' }}>Company Profile</h2>
-                <div className="glass-panel" style={{ padding: '1.5rem' }}>
-                    <video
-                        controls
-                        style={{
-                            width: '100%',
-                            maxHeight: '500px',
-                            borderRadius: '8px',
-                            background: 'black'
-                        }}
-                    >
-                        <source src="/video/company%20profile-2.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                    <div style={{ marginTop: '1rem', display: 'flex', justifyContent: 'flex-end' }}>
-                        <a
-                            href="/video/company%20profile-2.mp4"
-                            download="Sujal-Industries-Company-Profile.mp4"
-                            className="glass-panel"
-                            style={{
-                                padding: '0.75rem 1.5rem',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '0.5rem',
-                                textDecoration: 'none',
-                                color: 'var(--color-text)',
-                                transition: 'background 0.3s'
-                            }}
-                            onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.1)'}
-                            onMouseLeave={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.05)'}
-                        >
-                            <FaDownload />
-                            <span>Download Video</span>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
             {/* Brochures & Downloads */}
             <section>
                 <h2 style={{ fontSize: '2rem', marginBottom: '2rem', color: 'var(--color-secondary)' }}>Downloads</h2>
                 <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
+                    {/* Company Profile Video */}
+                    <a
+                        href="/video/company%20profile-2.mp4"
+                        download="Sujal-Industries-Company-Profile.mp4"
+                        className="glass-panel"
+                        style={{
+                            padding: '2rem',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '1rem',
+                            minWidth: '280px',
+                            cursor: 'pointer',
+                            transition: 'background 0.3s',
+                            textDecoration: 'none',
+                            color: 'inherit'
+                        }}
+                        onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.1)'}
+                        onMouseLeave={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.05)'}
+                    >
+                        <div style={{
+                            width: '50px',
+                            height: '50px',
+                            background: 'var(--color-primary)',
+                            borderRadius: '50%',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            color: 'black'
+                        }}>
+                            <FaPlay />
+                        </div>
+                        <div>
+                            <h3 style={{ fontSize: '1.2rem', marginBottom: '0.2rem' }}>Company Profile</h3>
+                            <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)' }}>MP4 • 64 MB</p>
+                        </div>
+                    </a>
+
+                    {/* Other Downloads */}
                     {[
-                        { title: 'Company Profile', size: '2.5 MB' },
                         { title: 'Product Catalog 2024', size: '5.1 MB' },
                         { title: 'Technical Specifications', size: '1.8 MB' }
                     ].map((doc, index) => (
