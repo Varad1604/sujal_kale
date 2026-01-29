@@ -28,21 +28,25 @@ export const OurFacility = () => {
                 <div className="glass-panel" style={{ padding: '1rem', overflow: 'hidden' }}>
                     <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, background: 'black', borderRadius: '8px' }}>
                         {/* Placeholder for Video - Replace iframe src with actual video */}
-                        <div style={{
-                            position: 'absolute',
-                            top: 0,
-                            left: 0,
-                            width: '100%',
-                            height: '100%',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            flexDirection: 'column',
-                            color: 'rgba(255,255,255,0.5)'
-                        }}>
-                            <FaPlay size={50} style={{ marginBottom: '1rem' }} />
-                            <span>Corporate Video / Factory Tour</span>
-                        </div>
+                        <video
+                            controls
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            style={{
+                                position: 'absolute',
+                                top: 0,
+                                left: 0,
+                                width: '100%',
+                                height: '100%',
+                                borderRadius: '8px',
+                                objectFit: 'cover'
+                            }}
+                        >
+                            <source src="/video/company%20profile.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
             </section>
